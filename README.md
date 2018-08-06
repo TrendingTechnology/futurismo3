@@ -2,7 +2,9 @@
 
 GatsbyJS Site
 
-[![CircleCI](https://circleci.com/gh/tsu-nera/futurismo3/tree/master.svg?style=svg)](https://circleci.com/gh/tsu-nera/futurismo3/tree/master)
+[![CircleCI](https://circleci.com/gh/tsu-nera/futurismo3/tree/master.svg?style=svg)](https://circleci.com/gh/tsu-nera/futurismo3)
+
+[![codecov](https://codecov.io/gh/tsu-nera/futurismo3/branch/master/graph/badge.svg)](https://codecov.io/gh/tsu-nera/futurismo3)
 
 ## Deploy
 

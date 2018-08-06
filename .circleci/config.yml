@@ -31,7 +31,7 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-      # - run: git diff --name-only origin/master | grep .md | xargs ./postlint
+      - run: git diff --name-only origin/master | grep .md | xargs ./postlint
       - run: ./node_modules/.bin/codecov
 
       - save_cache:
