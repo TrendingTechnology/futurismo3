@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
     "bluebird": "^3.5.1",
+    "codecov.io": "^0.1.6",
     "gatsby": "^2.0.0-beta.67",
     "gatsby-cli": "^2.0.0-beta.7",
     "gatsby-image": "^2.0.0-beta.7",
@@ -46,6 +47,7 @@
     "react-icons": "^3.0.0-beta.5",
     "styled-components": "^3.3.3",
     "textlint": "^11.0.0",
+    "textlint-formatter-codecov": "^1.0.2",
     "textlint-rule-no-mix-dearu-desumasu": "^3.0.3",
     "textlint-rule-preset-ja-spacing": "^2.0.1",
     "textlint-rule-preset-ja-technical-writing": "^3.0.1",
@@ -64,6 +66,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "codecov": "^3.0.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",

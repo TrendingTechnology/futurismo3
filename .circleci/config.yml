@@ -32,6 +32,7 @@ jobs:
 
       - run: yarn install
       - run: git diff --name-only origin/master | grep .md | xargs ./postlint
+      - run: git diff --name-only origin/master | grep .md | xargs ./codecovcheck
 
       - save_cache:
           paths:
