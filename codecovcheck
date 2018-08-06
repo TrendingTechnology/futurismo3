@@ -1,0 +1,2 @@
+#!/bin/bash
+./node_modules/textlint/bin/textlint.js -f codecov $1 | ./node_modules/codecov.io/bin/codecov.io.js --token=39b5c42e-b442-47bf-8b1e-bf290b3bfa33
