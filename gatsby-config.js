@@ -87,7 +87,6 @@ module.exports = {
         siteUrl: `https://futurismo.biz`,
       },
     },
-    `gatsby-plugin-remove-trailing-slashes`,
 
     /* Netlify */
     `gatsby-plugin-netlify-cache`,
