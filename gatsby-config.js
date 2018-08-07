@@ -81,6 +81,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-robots-txt',
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://futurismo.biz`,
+      },
+    },
 
     /* Netlify */
     `gatsby-plugin-netlify-cache`,
