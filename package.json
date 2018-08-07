@@ -27,6 +27,7 @@
     "gatsby-plugin-sharp": "^2.0.0-beta.7",
     "gatsby-plugin-sitemap": "^2.0.0-beta.3",
     "gatsby-plugin-styled-components": "^3.0.0-beta.2",
+    "gatsby-remark-autolink-headers": "^2.0.0-beta.5",
     "gatsby-remark-copy-linked-files": "^2.0.0-beta.3",
     "gatsby-remark-images": "^2.0.1-beta.9",
     "gatsby-remark-prismjs": "^2.0.5",
