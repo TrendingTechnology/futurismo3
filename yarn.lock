@@ -9863,6 +9863,10 @@ react-icons@^3.0.0-beta.5:
   version "3.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.0.0-beta.5.tgz#01e83dd182ce68b0c8ecdb894eccf491193fd88e"
 
+react-if-img@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-if-img/-/react-if-img-1.0.1.tgz#db80a6475df31641ec880a90c4ff55da3886961e"
+
 react-is@^16.3.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.1.tgz#d624c4650d2c65dbd52c72622bbf389435d9776e"

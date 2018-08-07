@@ -1,22 +1,15 @@
-# Futurismo
+---
+title: CI/CDによるアジャイルなブログ記事作成
+date: 2018-08-07 17:00:00
+image: "http://res.cloudinary.com/tsu-nera/image/upload/c_thumb,w_600/v1533617837/futurismo/thumbnails/blog-writing.jpg"
+---
 
-Tsunemichi Harada（[tsu-nera](https://twitter.com/tsu_nera）)のブログです。
-
-このサイトは、[GatsbyJS](https://next.gatsbyjs.org/)で作成し、 [Netlify](https://www.netlify.com/)にホスティングしています。
-
-ブログとボートフォリオサイトの２つのサイトを１つのドメインで運営しています。
-
-- blog: https://futurismo.biz
-- portfolio: https://futurismo.biz/profile
-
-## CI/CDによるアジャイルなブログ記事作成
-
-アジャイルなアプローチで、ブログ記事を作成します。
+この記事では、アジャイルなアプローチでブログ記事を作成する方法を紹介します。
 また、継続的インテグレーション・継続的デリバリをブログ執筆に導入します。
 
-### TL;DR
+## TL;DR
 
-まずは、概要を紹介します。
+まずは、やったことの概要を紹介します。
 
 - GitHubで記事のissueを作成
 - topic branch作成（posts/xxxx-xxxx）
@@ -41,7 +34,30 @@ Tsunemichi Harada（[tsu-nera](https://twitter.com/tsu_nera）)のブログで�
 - topic branchのクローズ
 - slackに完了通知
 
-### 使っている技術・ツール・サービスの紹介
+## Introduction
+
+まずは、この記事を書くきっかけになった２つの記事を紹介します。
+
+- [オンラインドキュメントへCI/CDを適用している話](https://www.slideshare.net/iwashi86/cicd-86801443)
+
+@iwashi86さんのスライド。図をみて、これはやりたいと思いました。
+
+- [Introduction \| 技術文書をソフトウェア開発する話](https://azu.gitbooks.io/nodefest-technical-writing/content/)
+
+@azu_reさんの記事。textlintに触れたときは、これは作文のゲームチェンジになるツールだと思いました。
+また、この記事には名言がたくさん埋め込まれています。
+
+- 文章は動的型付き言語
+- 技術文書の開発でもCIを回すのが基本
+- 自動校正 = ユニットテスト
+- 推敲 = リファクタリング
+
+２つとも自分には衝撃的であり、感動しました。そして、自分も真似してみたいと思ったことが今回の記事執筆の動機です。
+これから書く内容は、いわばお二人のアイデアの焼き回しです。
+
+先日、このアイデアを語ったところ、そのメリットは？と質問されました。このアジャイルなブログ執筆のメリットは、**ワクワクできる**ことです！
+
+## 使っている技術・ツール・サービスの紹介
 
 - Markdown ... 見やすい記法
 - Visual Studio Code ... 高機能エディタ、ここではMarkdown IDE
@@ -55,9 +71,9 @@ Tsunemichi Harada（[tsu-nera](https://twitter.com/tsu_nera）)のブログで�
 - serverless ... サーバレースサービス、よく分かっていない
 - slack ... チャットツール
 
-### 文章執筆IDEとしての Visual Studio Code
+## 文章執筆IDEとしての Visual Studio Code
 
-Visual Studio Codeを文章執筆のための統合開発環境IDEとして扱います。
+[Visual Studio Code](https://code.visualstudio.com/)を文章執筆のための統合開発環境IDEとして扱います。
 
 プラグインを入れることで、強力なMarkdownの執筆支援が可能です。
 
@@ -66,12 +82,21 @@ Visual Studio Codeを文章執筆のための統合開発環境IDEとして扱�
 - textlint/markdownlintによる静的解析
 - Git Integration
 
-### GitHub Flow
+静的解析のために、textlintとMarkdownLintを利用しています。
+
+- [作文界のゲームチェンジャー！ 日本語の文章校正ツールのtextlintを試した](https://futurismo.biz/use-textlint-for-markdown/)
+- [markdownlintをつかって、Markdownファイルの構文チェックを行う](https://futurismo.biz/use-textlint-for-markdown/)
+
+Lintingからのエラーのフィードバックはユニットテストに相当します。
+
+## GitHub Flow
 
 GitHub Flowに従った執筆を実施します。
 
 - [GitHub Flow \(Japanese translation\)](https://gist.github.com/Gab-km/3705015)
 - [GitHub Flow 図解 \- Qiita](https://qiita.com/tbpgr/items/4ff76ef35c4ff0ec8314)
+
+Git Flowというものが有名ですが、複雑すぎる欠点があるためより簡単なGitHub Flowを採用しました。
 
 具体的には、次のとおり。
 
@@ -81,16 +106,7 @@ GitHub Flowに従った執筆を実施します。
 - レビューとビルド、テストが通ったらmerge
 - branchとIssueを閉じる
 
-### Linting Tools
-
-textlintとMarkdownLintを利用しています。
-
-- [作文界のゲームチェンジャー！ 日本語の文章校正ツールのtextlintを試した](https://futurismo.biz/use-textlint-for-markdown/)
-- [markdownlintをつかって、Markdownファイルの構文チェックを行う](https://futurismo.biz/use-textlint-for-markdown/)
-
-Lintingからのフィードバックはユニットテストに相当します。
-
-### 継続的インテグレーション（CI）
+## 継続的インテグレーション（CI）
 
 GitHubにpushされるたび、ビルドとテストを実施します。
 
@@ -102,11 +118,13 @@ GitHubにpushされるたび、ビルドとテストを実施します。
 - [CircleCI](https://circleci.com/) ... yarn install/textlint/markdownlint Markdownのビルド
 - [Netlify](https://www.netlify.com/) ... gatsby build JavaScriptのビルド/画面プレビュー
 
+![github-ci-status](https://res.cloudinary.com/tsu-nera/image/upload/v1533616533/futurismo/posts/2018-08-07-132835_github-ci-status.png "GitHub CI Status")
+
 また、[codecov](https://codecov.io/)というカバレッジ計測ツールと連携させることで、カバレッジを計測できます。
 
 - 参考: [textlintで文章カバレッジレポートを継続的に見ていく \| Web Scratch](https://efcl.info/2016/01/12/textlint-coverage/)
 
-### 継続的デリバリ（CD）
+## 継続的デリバリ（CD）
 
 レビュー、テスト、ビルドの３つがOKであれば、 記事branchからマスタbranchにmargeします。
 
@@ -116,7 +134,9 @@ NetlifyとCircleCIの両方がOKでないとmarge禁止というルールを設�
 
 - [GitHub \+ Jenkins で、全てのプルリクエストに対してレビューとテストを必須にする \- Qiita](https://qiita.com/bonotake/items/37fb3194c33f3ae3bbf0)
 
-### 投稿のスケジューリング
+![branch protectoin rule](https://res.cloudinary.com/tsu-nera/image/upload/v1533616533/futurismo/posts/2018-08-07-branch-protection-rule.png)
+
+## 投稿のスケジューリング
 
 この段階まできたら、記事branchはマスタbranchへいつでもmerge可能、デプロイ可能となっています。
 なので記事の予約投稿を設定することによって、適切なタイミングで記事を公開します。
@@ -129,21 +149,15 @@ NetlifyとCircleCIの両方がOKでないとmarge禁止というルールを設�
 投稿の時間になると、serverlessがPRのacceptとマスタbranchへのmergeを実施します。
 マスタbranchへのcommitをトリガにしてNetlifyが動作して、本番環境に記事をデプロイします。
 
+![post-scheduler](https://res.cloudinary.com/tsu-nera/image/upload/v1533616533/futurismo/posts/2018-08-07-post-scheduler.png)
+
 あとは、branchとissueを削除して、slackにデプロイ完了の通知がくるのを待ちます。
 
 めでたし、めでたし。
 
-### Reference and Many Thanks
+## Reference and Many Thanks
 
 - [オンラインドキュメントへCI/CDを適用している話](https://www.slideshare.net/iwashi86/cicd-86801443)
 - [Githubで書く電子書籍](http://azu.github.io/slide/individual/)
 - [Introduction \| 技術文書をソフトウェア開発する話](https://azu.gitbooks.io/nodefest-technical-writing/content/)
 - [一人で使えるGithub Issue](http://azu.github.io/slide/udonjs/github-issue.html)
-
-## Badges
-
-[![CircleCI](https://circleci.com/gh/tsu-nera/futurismo3/tree/master.svg?style=svg)](https://circleci.com/gh/tsu-nera/futurismo3)
-
-[![codecov](https://codecov.io/gh/tsu-nera/futurismo3/branch/master/graph/badge.svg)](https://codecov.io/gh/tsu-nera/futurismo3)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tsu-nera/futurismo3)

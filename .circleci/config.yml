@@ -6,7 +6,7 @@ version: 2
 general:
   branches:
     only:
-      - /post\/.*/
+      - /posts.*/
 jobs:
   build:
     docker:

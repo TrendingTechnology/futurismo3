@@ -27,6 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
                     title
                     date(formatString: "DD MMMM, YYYY")
                     draft
+                    image
                   }
                   excerpt
                   html

@@ -24,8 +24,8 @@ export default ({ pageContext }) => {
         <div>
           <h1 className="post-title">{post.node.frontmatter.title}</h1>
           <span className="post-date">{post.node.frontmatter.date}</span>
+          <img src={post.node.frontmatter.image} alt="thumbnail" />
           <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
-
           <div className="related">
             <ul className="related-posts">
               {prev ? (
