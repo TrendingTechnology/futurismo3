@@ -80,6 +80,7 @@ module.exports = {
     `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-robots-txt',
+    `gatsby-plugin-catch-links`,
 
     /* Netlify */
     `gatsby-plugin-netlify-cache`,
