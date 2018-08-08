@@ -1,0 +1,6 @@
+.table-of-contents ul, ol {
+  background: #dadada;/*灰色に*/
+  border-radius :8px;
+  box-shadow :0px 0px 0px silver;
+  padding: 0.5em 0.5em 0.5em 2.0em;
+}

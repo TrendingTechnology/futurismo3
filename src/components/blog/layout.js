@@ -6,6 +6,7 @@ import Sidebar from './sidebar'
 
 import '../../css/blog/poole.css'
 import '../../css/blog/hyde.css'
+import '../../css/blog/blog.css'
 
 export default ({ children }) => (
   <StaticQuery

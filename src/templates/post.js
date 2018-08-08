@@ -25,6 +25,9 @@ export default ({ pageContext }) => {
           <h1 className="post-title">{post.node.frontmatter.title}</h1>
           <span className="post-date">{post.node.frontmatter.date}</span>
           <img src={post.node.frontmatter.image} alt="thumbnail" />
+          <p>
+            <strong>Table of Contents</strong>
+          </p>
           <div
             className="table-of-contents"
             dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
