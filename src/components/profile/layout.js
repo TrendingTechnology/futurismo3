@@ -2,9 +2,8 @@ import React from 'react'
 
 import Navigation from './Navigation'
 import Footer from './Footer'
-
-import '../../css/profile/main.scss'
-import '../../css/profile/profile.css'
+import StyledProfile from './StyledProfile'
+import StyledMain from './StyledMain'
 
 class Template extends React.Component {
   constructor(props) {
@@ -31,10 +30,17 @@ class Template extends React.Component {
 
     return (
       <div className={`body ${this.state.loading}`}>
-        <Navigation />
-        {children}
-        <script src="https://embed.small.chat/T0GSX24ADGC2JS0Y2W.js" async />
-        <Footer />
+        <StyledMain>
+          <StyledProfile>
+            <Navigation />
+            {children}
+            <script
+              src="https://embed.small.chat/T0GSX24ADGC2JS0Y2W.js"
+              async
+            />
+            <Footer />
+          </StyledProfile>
+        </StyledMain>
       </div>
     )
   }

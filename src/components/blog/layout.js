@@ -4,9 +4,9 @@ import { graphql, StaticQuery } from 'gatsby'
 import 'prismjs/themes/prism-okaidia.css'
 import Sidebar from './sidebar'
 
-import '../../css/blog/poole.css'
-import '../../css/blog/hyde.css'
-import '../../css/blog/blog.css'
+import StyledPoole from './StyledPoole'
+import StyledHyde from './StyledHyde'
+import StyledBlog from './StyledBlog'
 
 export default ({ children }) => (
   <StaticQuery
@@ -21,13 +21,19 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <div className="theme-base-01">
-        <Sidebar
-          title={data.site.siteMetadata.title}
-          description={data.site.siteMetadata.description}
-        />
-        <div className="content container">{children}</div>
-      </div>
+      <StyledBlog>
+        <StyledPoole>
+          <StyledHyde>
+            <div className="theme-base-01">
+              <Sidebar
+                title={data.site.siteMetadata.title}
+                description={data.site.siteMetadata.description}
+              />
+              <div className="content container">{children}</div>
+            </div>
+          </StyledHyde>
+        </StyledPoole>
+      </StyledBlog>
     )}
   />
 )
