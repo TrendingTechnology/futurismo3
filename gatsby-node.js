@@ -29,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
                     date(formatString: "DD MMMM, YYYY")
                     draft
                     image
+                    tags
                   }
                   excerpt
                   html
@@ -86,7 +87,6 @@ exports.createPages = ({ graphql, actions }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors)
           reject(result.errors)
         }
 
@@ -120,6 +120,28 @@ exports.createPages = ({ graphql, actions }) => {
         } else {
           allowedPosts = posts.filter(post => !post.node.frontmatter.draft)
         }
+
+        // Tag pages:
+        let tags = []
+        // Iterate through each post, putting all found tags into `tags`
+        _.each(allowedPosts, edge => {
+          if (_.get(edge, 'node.frontmatter.tags')) {
+            tags = tags.concat(edge.node.frontmatter.tags)
+          }
+        })
+        // Eliminate duplicate tags
+        tags = _.uniq(tags)
+
+        // Make tag pages
+        tags.forEach(tag => {
+          createPage({
+            path: `/tags/${_.kebabCase(tag)}/`,
+            component: path.resolve('src/templates/tags.js'),
+            context: {
+              tag,
+            },
+          })
+        })
 
         _.each(allowedPosts, (post, index) => {
           const prev =

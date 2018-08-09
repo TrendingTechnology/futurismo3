@@ -30,7 +30,7 @@ tsu-nera(つーねら)のニックネームで活動しています。
 | Twitter  | [@tsu_nera](https://twitter.com/tsu_nera)|
 | GitHub   | [tsu-nera](https://github.com/tsu-nera)|
 | LinkedIn | [Tsunemichi Harada](https://www.linkedin.com/in/tsunemichi-harada-14a41836/)|
-| Blog     | [Futurismo](http://futurismo.biz)
+| Blog     | [Futurismo](https://futurismo.biz)
 | Facebook | [原田 経道](https://www.facebook.com/tsunemichi.harada)|
 | Kaggle   | [tsu-nera](https://www.kaggle.com/fox10225fox)|
 

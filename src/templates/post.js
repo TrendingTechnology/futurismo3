@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet'
 import Link from 'gatsby-link'
 import Layout from '../components/blog/layout'
 
+const _ = require('lodash')
+
 const RelatedPost = ({ type, slug, title, date }) => (
   <li>
     <h3>
@@ -14,9 +16,18 @@ const RelatedPost = ({ type, slug, title, date }) => (
   </li>
 )
 
+function Tags(props) {
+  if (!props.tags) {
+    return null
+  }
+
+  return props.tags.map(tag => (
+    <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>
+  ))
+}
+
 export default ({ pageContext }) => {
   const { post, prev, next } = pageContext
-
   return (
     <div>
       <Helmet title={`${post.node.frontmatter.title}`} />
@@ -24,6 +35,7 @@ export default ({ pageContext }) => {
         <div>
           <h1 className="post-title">{post.node.frontmatter.title}</h1>
           <span className="post-date">{post.node.frontmatter.date}</span>
+          <Tags tags={post.node.frontmatter.tags} />
           <img src={post.node.frontmatter.image} alt="thumbnail" />
           <p>
             <strong>Table of Contents</strong>
