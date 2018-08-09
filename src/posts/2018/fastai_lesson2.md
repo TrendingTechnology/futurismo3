@@ -1,6 +1,7 @@
 ---
 title: "fast.ai part1 lesson2 画像分類コンペでのゴールデンルール"
 date: 2018-05-03T14:45:27+09:00
+size: false
 ---
 
 ## はじめに

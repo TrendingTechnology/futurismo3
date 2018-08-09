@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $1 = "" ]; then
+    exit 0
+else
+    ./node_modules/.bin/textlint -c .textlintrc.json -f codecov $1 | ./node_modules/.bin/codecov
+fi

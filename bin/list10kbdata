@@ -1,2 +1,6 @@
 #!/bin/bash
 find src/posts -name "*.md" -size +9500c | xargs grep url: | cut -f 2 -d = | xargs echo | sed -e 's/ /\|/g'
+
+echo
+
+./bin/list10kbdata_sub

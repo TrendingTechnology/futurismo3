@@ -1,6 +1,7 @@
 ---
 title: "炎上速(blazing-fast) 静的サイトジェネレーター GatsbyJs を試してみる"
 date: 2018-07-01T15:41:57+09:00
+size: false
 ---
 
 ## はじめに: Gatsby 導入する理由

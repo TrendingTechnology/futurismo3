@@ -1,6 +1,7 @@
 ---
 title: "Railsのbetter_errorsとRubyMineの連携でコードにジャンプ"
 date: 2018-06-25T06:24:52+09:00
+size: false
 ---
 
 ## はじめに

@@ -1,3 +1,0 @@
-#!/bin/bash
-yarn install
-git diff --name-only origin/master | grep .md | xargs ./postlint

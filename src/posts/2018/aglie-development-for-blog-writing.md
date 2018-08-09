@@ -1,6 +1,7 @@
 ---
 title: CI/CDによるアジャイルなブログ記事作成
 date: 2018-08-07 17:00:00
+size: false
 image: "http://res.cloudinary.com/tsu-nera/image/upload/c_thumb,w_600/v1533617837/futurismo/thumbnails/blog-writing.jpg"
 ---
 

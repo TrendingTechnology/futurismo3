@@ -2,6 +2,7 @@
 title: markdownlintをつかって、Markdownファイルの構文チェックを行う
 description: markdownlintをつかって、Markdownファイルの構文チェックを行います
 date: 2018-08-06 12:14:18
+size: false
 ---
 
 ひとつ前の記事で、textlintというツールを紹介しました。

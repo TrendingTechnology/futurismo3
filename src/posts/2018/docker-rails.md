@@ -1,6 +1,7 @@
 ---
 title: "Ruby on Rails + MySQL 開発環境を Dockerで構築"
 date: 2018-06-19T01:23:53+09:00
+verson: 2
 ---
 
 ## はじめに

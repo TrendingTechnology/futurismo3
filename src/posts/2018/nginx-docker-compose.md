@@ -1,44 +1,48 @@
 ---
 title: "一台のサーバでdocker-composeで管理された railsプロジェクトを複数立ちあげる方法"
 date: 2018-07-09T17:37:53+09:00
+size: true
 ---
 
-## はじめに
-さくらVPSで 1つのサーバで 2つの railsサービスを動かしたい。（そのうちの一つはマストドン）
+さくらVPSで1つのサーバで2つのrailsサービスを動かしたい。（そのうちのひとつはマストドン）
 
 この場合、ドメインを２つ使う必要があると思い、ドメインを２つ取得したのだが、
-今サブドメインという仕組みを知った。これをつかえばやりたいことが実現できそうだ。
-railsプロジェクトは docker-composeで管理している。
-railsアプリを https化するために、let's encryptの dockerもつかうと便利なことがわかった。
+今サブドメインというしくみを知った。これをつかえばやりたいことが実現できそうだ。
+railsプロジェクトはdocker-composeで管理している。
+railsアプリケーションをhttps化するために、let's encryptのdockerもつかうと便利なことがわかった。
 
-まとめると、以下のようなことをやりたい。
+まとめると、次のようなことをやりたい。
 
-- Dockerがインストールされているサーバに複数の docker-composeで管理されたWebアプリを動かす。
-- Webアプリには、それぞれのドメインを設定して、一意にアクセスできるようにする。
-- 各ドメインには、Let's Encryptで取得した SSL証明書が適用される。
+- Dockerがインストールされているサーバに複数のdocker-composeで管理されたWebアプリケーションを動かす。
+- Webアプリケーションには、それぞれのドメインを設定して、一意にアクセスできるようにする。
+- 各ドメインには、Let's Encryptで取得したSSL証明書が適用される。
 
 ## 結末
+
 調べて実施した結果、やりたいことはできた。
 
 しかし、**致命的な問題** が発生して、解決方法が分からず、結局挫折した。
 
-その問題点とは、**railsアプリ間でのコンテナ間通信ができない**、というもの。
+その問題点とは、**railsアプリケーション間でのコンテナ間通信ができない**、というもの。
 たとえば、pingは届くのだけれども、wgetやcurlが届かない。
 これが解決できなくて、挫折してしまった。
 
-解決方法がわかるかた、教えてください！
+解決方法が分かる方、教えてください！
 
 ## 手順
-挫折はしたものの、rails間で通信しない場合の運用ならば問題ないため、手順をわすれないように残しておく。
+
+挫折はしたものの、rails間で通信しない場合の運用並ば問題ないため、手順をわすれないように残しておく。
 
 ### 前提となる環境
-- さくらVPS(Ubuntu)
-- Dockerと docker-composeがインストールされている
+
+- さくらVPS（Ubuntu）
+- Dockerとdocker-composeがインストールされている
 
 ### コンテナ間通信をするための経路を作成
-Dockerのコンテナ同士が通信するための経路を作成する。
 
-```
+Dockerのコンテナどうしが通信するための経路を作成する。
+
+```bash
 # ネットワークを作成する
 $ docker network create --driver bridge front
 $ docker network create --driver bridge back-mstdn
@@ -46,20 +50,21 @@ $ docker network create --driver bridge back-wtdn
 ```
 
 ### リバースプロキシサーバ & Let's Encryptサーバ
+
 リバースプロキシサーバとして、nginxを利用する。
 
 こいつの役割がいまいちわかっていないのだが、複数ドメインを共存させることができる。
 さらには、ドメインについてSSL証明書を発行してくれる。
 
-nginxと letsencryptサーバの dockerイメージを利用する。
+nginxとletsencryptサーバのdockerイメージを利用する。
 
 - [jwilder/nginx\-proxy \- Docker Hub](https://hub.docker.com/r/jwilder/nginx-proxy/)
 - [jrcs/letsencrypt\-nginx\-proxy\-companion \- Docker Hub](https://hub.docker.com/r/jrcs/letsencrypt-nginx-proxy-companion/)
 
-`~/nginx-proxy` ディレクトリを作成して、そのなかに `docker-compose.yml`を作成する。
+`~/nginx-proxy` ディレクトリを作成して、その中に `docker-compose.yml`を作成する。
 certディレクトリに証明書が保存される。
 
-```
+```yaml
 version: '2'
 services:
   proxy:
@@ -98,17 +103,18 @@ networks:
     external: true
 ```
 
-### railsアプリ1(Mastodon)の docker-compose.ymlを作成
-ひとつ目のWebアプリ、マストドンを立ちあげる。
+### railsアプリケーション1（Mastodon）の docker-compose.ymlを作成
 
-Mastodonのリポジトリを closeすると、docker-compose.ymlがあるので、それを編集する。
+1つ目のWebアプリケーション、マストドンを立ちあげる。
 
-- Nginxコンテナを新規追加
+Mastodonのリポジトリをcloseすると、docker-compose.ymlがあるので、それを編集する。
+
+- nginxコンテナを新規追加
   - ポートは9090(かぶらなければなんでもよい）
 - 各コンテナを `back-mstdn` ネットワークでつなぐ
-- `db`, `redis` の volumesのコメントアウトを外して、データの永続化。
+- `db`, `redis` のvolumesのコメントアウトを外して、データの永続化。
 
-```
+```yaml
 version: '2'
 services:
 
@@ -208,10 +214,10 @@ networks:
     external: true
 ```
 
-.env.productionを読み込んでいるが、これは マストドンを動かすための環境変数がいろいろ書いてある。
+.env.productionを読み込んでいるが、これはマストドンを動かすための環境変数がいろいろ書いてある。
 編集するところだけ抜き出そう。メールサーバには、ここではsparkpostを利用している。
 
-```
+```bash
 VIRTUAL_HOST=weightodon.site
 VIRTUAL_PORT=9090
 VIRTUAL_PROTO=https
@@ -231,15 +237,15 @@ SMTP_PASSWORD=<Web APIで表示される値>
 SMTP_FROM_ADDRESS=notifications@weightodon.site
 ```
 
-最後に nginxの設定。`mastodon/setting/nginx/conf.d/default.conf` を作成して、そこに以下を記述。
-編集する箇所は、
+最後にnginxの設定。`mastodon/setting/nginx/conf.d/default.conf` を作成して、そこに以下を記述。
+編集する箇所は次のとおり。
 
 - listen 9090
-- server_name を設定
+- server_nameを設定
 - ssl_certificate, ssl_sertificate_keyのパスのサイトを自分のドメインにする
-- rootのところをコンテナの中からみた、公開ディレクトリに設定。
+- rootのところをコンテナの中からみた、公開ディレクトリに設定
 
-```
+```text
 map $http_upgrade $connection_upgrade {
   default upgrade;
   ''      close;
@@ -328,14 +334,15 @@ server {
 }
 ```
 
-これで、すべて完了。`docker-compse up -d` をすれば゛自動で証明書がダウンロードされてhttps化されるはずだ。
+これで、すべて完了。`docker-compse up -d` で自動で証明書がダウンロードされてhttps化されるはずだ。
 
-### ２つめのrailsアプリを立ちあげる
-2つめは自作 railsアプリ。基本的には、Mastodonと同じ。なので、一気に紹介。
+### ２つめのrailsアプリケーションを立ちあげる
+
+2つめは自作railsアプリケーション。基本的には、Mastodonと同じ。ですので、一気に紹介。
 
 - docker-compose.yml
 
-```
+```yaml
 version: '2'
 services:
   nginx:
@@ -398,7 +405,7 @@ services:
       - ./postgres:/var/lib/postgresql/data
     networks:
       - back-wtdn
-    
+
 volumes:
   db-volume:
   bundle:
@@ -414,7 +421,7 @@ networks:
 
 - `setting/nginx/conf.d/default.yml`
 
-```
+```text
 map $http_upgrade $connection_upgrade {
   default upgrade;
   ''      close;

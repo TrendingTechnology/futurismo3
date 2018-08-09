@@ -2,6 +2,7 @@
 title: "Dockerで立てるMastodonローカル環境"
 date: 2018-07-01T02:30:13+09:00
 draft: true
+size: false
 ---
 
 ## はじめに

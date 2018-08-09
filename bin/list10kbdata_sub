@@ -1,0 +1,5 @@
+#!/bin/bash
+find src/posts -name "*.md" -size +9500c | xargs grep url: | cut -f 1 -d : > tmp/algolia_pre
+find src/posts -name "*.md" -size +9500c > tmp/algolia_post
+
+diff tmp/algolia_pre tmp/algolia_post

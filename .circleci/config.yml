@@ -7,6 +7,7 @@ general:
   branches:
     only:
       - /posts.*/
+      - /dev.*/
 jobs:
   build:
     docker:
@@ -31,8 +32,8 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-      - run: git diff --name-only origin/master | grep .md | xargs ./postlint
-      - run: git diff --name-only origin/master | grep .md | xargs ./codecovcheck
+      # - run: git diff --name-only origin/master | grep .md | xargs ./bin/postlint
+      # - run: git diff --name-only origin/master | grep .md | xargs ./bin/codecovcheck
 
       - save_cache:
           paths:

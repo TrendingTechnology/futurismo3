@@ -37,6 +37,7 @@
     "gatsby-source-filesystem": "^2.0.1-beta.8",
     "gatsby-transformer-remark": "^2.1.1-beta.5",
     "gatsby-transformer-sharp": "^2.1.1-beta.6",
+    "instantsearch.css": "^7.1.0",
     "lodash": "^4.17.10",
     "markdownlint-cli": "^0.12.0",
     "moment": "^2.22.2",

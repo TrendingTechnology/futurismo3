@@ -1,6 +1,7 @@
 ---
 title: "Visual Studio Code で JavaScript開発環境の構築"
 date: 2018-07-21T01:17:46+09:00
+size: false
 ---
 ## はじめに
 今まで有料のJetbrain IDEをつかっていたのだけれども、見た目のダサさに愛想が尽きた.そこで、いろいろ探していたところ Visual Studio Codeの美しさに一目惚れしてしまったのだった.

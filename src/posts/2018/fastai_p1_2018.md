@@ -1,6 +1,7 @@
 ---
 title: "fast.ai Practical Deep Learning for Corders 2018"
 date: 2018-05-03T20:53:43+09:00
+size: false
 ---
 
 ## はじめに

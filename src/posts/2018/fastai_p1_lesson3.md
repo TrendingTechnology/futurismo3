@@ -1,6 +1,7 @@
 ---
 title: "fast.ai par1 lesson4 Tabularデータの攻略方法メモ"
 date: 2018-05-04T09:48:32+09:00
+size: false
 ---
 
 ## はじめに

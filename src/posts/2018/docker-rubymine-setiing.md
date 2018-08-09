@@ -1,6 +1,7 @@
 ---
 title: "Dockerで立ち上げたRails + MySQL 環境をRubyMineで接続"
 date: 2018-06-21T05:13:36+09:00
+size: false
 ---
 
 ## はじめに

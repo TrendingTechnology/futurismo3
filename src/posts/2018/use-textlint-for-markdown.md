@@ -2,6 +2,7 @@
 title: 作文界のゲームチェンジャー！ 日本語の文章校正ツールのtextlintを試した
 date: 2018-08-06 03:23:40
 description: 日本語の文章校正ツールであるtextlintをつかってみた
+size: false
 ---
 感動しました！
 

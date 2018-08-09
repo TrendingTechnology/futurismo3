@@ -1,2 +1,0 @@
-#!/bin/bash
-./node_modules/.bin/textlint -c .textlintrc.json -f codecov $1 | ./node_modules/.bin/codecov

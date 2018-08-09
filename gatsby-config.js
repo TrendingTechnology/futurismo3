@@ -38,6 +38,42 @@ const query = `{
       }
     }
   }
+  algolia3: allMarkdownRemark(filter: {frontmatter: {size: {eq: true}}}) {
+    edges {
+      node {
+        objectID: id
+        fields {
+          slug
+        }
+        excerpt
+        frontmatter {
+          title
+          description
+          tags
+          date
+        }
+      }
+    }
+  }
+  algolia4: allMarkdownRemark(filter: {frontmatter: {size: {eq: false}}}) {
+    edges {
+      node {
+        objectID: id
+        fields {
+          slug
+        }
+        internal {
+          content
+        }
+        frontmatter {
+          title
+          description
+          tags
+          date
+        }
+      }
+    }
+  }
 }`
 
 const queries = [
@@ -48,6 +84,14 @@ const queries = [
   {
     query,
     transformer: ({ data }) => data.algolia2.edges.map(({ node }) => node),
+  },
+  {
+    query,
+    transformer: ({ data }) => data.algolia3.edges.map(({ node }) => node),
+  },
+  {
+    query,
+    transformer: ({ data }) => data.algolia4.edges.map(({ node }) => node),
   },
 ]
 

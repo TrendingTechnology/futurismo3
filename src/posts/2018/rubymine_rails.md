@@ -2,6 +2,7 @@
 title: "Rubymine_rails"
 date: 2018-06-12T11:01:13+09:00
 draft: true
+size: false
 ---
 
 ## はじめに

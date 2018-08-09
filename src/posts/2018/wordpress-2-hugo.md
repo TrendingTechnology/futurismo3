@@ -1,6 +1,7 @@
 ---
 date: 2018-04-11T23:28:11+09:00
 title: Futirismo Blogを WordPressから Hugoに移行しました
+size: false
 ---
 
 このブログは、WordPress と 賢威テンプレートでながらく運営してきたのだけれども、

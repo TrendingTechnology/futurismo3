@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [$1 = ""]; then
+    exit 0
+else
+    ./node_modules/textlint/bin/textlint.js -c .textlintrc.json $1
+    ./node_modules/markdownlint-cli/markdownlint.js -c .markdownlintrc.json $1
+fi
