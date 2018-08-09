@@ -42,6 +42,7 @@ export default ({ title, description }) => (
         <ListLink to="/about">About</ListLink>
         <ListLink to="/profile">Profile</ListLink>
         <ListLink to="/search">Search</ListLink>
+        <ListLink to="/tags">Tags</ListLink>
         <ListLinkNoOpener to="https://twitter.com/tsu_nera">
           Twitter
         </ListLinkNoOpener>

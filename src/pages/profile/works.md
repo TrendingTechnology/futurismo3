@@ -35,7 +35,7 @@ thumbnail: "../../images/works-thumb.jpg"
   ネットワーク解析、UML設計、デザインパターン、JUnitによるTDDなどのスキルを取得。
 
   遠隔地からのファイルアクセスを高速化するデータ転送技術を開発 : 富士通
-  http://pr.fujitsu.com/jp/news/2015/06/22.html
+  https://pr.fujitsu.com/jp/news/2015/06/22.html
 ```
 
 ```text

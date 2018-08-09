@@ -136,9 +136,9 @@ NetlifyとCircleCIの両方がOKでないとmarge禁止というルールを設�
 ### Reference and Many Thanks
 
 - [オンラインドキュメントへCI/CDを適用している話](https://www.slideshare.net/iwashi86/cicd-86801443)
-- [Githubで書く電子書籍](http://azu.github.io/slide/individual/)
+- [Githubで書く電子書籍](https://azu.github.io/slide/individual/)
 - [Introduction \| 技術文書をソフトウェア開発する話](https://azu.gitbooks.io/nodefest-technical-writing/content/)
-- [一人で使えるGithub Issue](http://azu.github.io/slide/udonjs/github-issue.html)
+- [一人で使えるGithub Issue](https://azu.github.io/slide/udonjs/github-issue.html)
 
 ## Badges
 
