@@ -2,7 +2,7 @@
 title: プロジェクト・実績
 type: profile
 name: projects
-thumbnail: "../../images/projects-thumb.jpg"
+thumbnail: "../../../src/images/projects-thumb.jpg"
 ---
 
 私のGitHubのリポジトリの中から、厳選したプロジェクトを紹介します(新しい順)

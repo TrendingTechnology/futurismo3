@@ -2,7 +2,7 @@
 title: 職務経歴
 type: profile
 name: works
-thumbnail: "../../images/works-thumb.jpg"
+thumbnail: "../../../src/images/works-thumb.jpg"
 ---
 大学では数学と Computer Science を学びました。
 大学卒業後、2010 年富士通コンピュータテクノロジーズに入社し、

@@ -2,7 +2,7 @@
 title: 自己紹介
 type: profile
 name: about
-thumbnail: "../../images/about-thumb.jpg"
+thumbnail: "../../../src/images/about-thumb.jpg"
 ---
 
 はじめまして、原田経道(はらだ つねみち)と申します。

@@ -32,8 +32,8 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-      - run: git diff --name-only origin/master | grep .md | xargs ./bin/postlint
-      - run: git diff --name-only origin/master | grep .md | xargs ./bin/codecovcheck
+      # - run: git diff --name-only origin/master | grep .md | xargs ./bin/postlint
+      # - run: git diff --name-only origin/master | grep .md | xargs ./bin/codecovcheck
 
       - save_cache:
           paths:

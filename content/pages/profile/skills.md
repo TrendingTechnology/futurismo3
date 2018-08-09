@@ -2,7 +2,7 @@
 title: スキルセット
 type: profile
 name: skills
-thumbnail: "../../images/skills-thumb.jpg"
+thumbnail: "../../../src/images/skills-thumb.jpg"
 ---
 
 保有スキルについて、紹介します。プロジェクトページの成果物も合わせてご覧ください。

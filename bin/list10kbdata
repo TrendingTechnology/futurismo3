@@ -1,5 +1,5 @@
 #!/bin/bash
-find src/posts -name "*.md" -size +9500c | xargs grep url: | cut -f 2 -d = | xargs echo | sed -e 's/ /\|/g'
+find content/posts -name "*.md" -size +9500c | xargs grep url: | cut -f 2 -d = | xargs echo | sed -e 's/ /\|/g'
 
 echo
 
