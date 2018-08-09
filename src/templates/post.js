@@ -26,6 +26,13 @@ function Tags(props) {
   ))
 }
 
+function Thumbnail(props) {
+  if (!props.src) {
+    return null
+  }
+  return <img src={props.src} alt="thumbnail" />
+}
+
 export default ({ pageContext }) => {
   const { post, prev, next } = pageContext
   return (
@@ -36,7 +43,7 @@ export default ({ pageContext }) => {
           <h1 className="post-title">{post.node.frontmatter.title}</h1>
           <span className="post-date">{post.node.frontmatter.date}</span>
           <Tags tags={post.node.frontmatter.tags} />
-          <img src={post.node.frontmatter.image} alt="thumbnail" />
+          <Thumbnail src={post.node.frontmatter.image} />
           <p>
             <strong>Table of Contents</strong>
           </p>
