@@ -1,6 +1,6 @@
 # Futurismo
 
-Tsunemichi Harada（[tsu-nera](https://twitter.com/tsu_nera）)のブログです。
+Tsunemichi Harada（[tsu-nera](https://twitter.com/tsu_nera)のブログです。
 
 このサイトは、[GatsbyJS](https://next.gatsbyjs.org/)で作成し、 [Netlify](https://www.netlify.com/)にホスティングしています。
 
