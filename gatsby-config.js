@@ -141,6 +141,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-remark-responsive-image`,
+            options: {
+              maxWidth: 590,
+            },
+          },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
@@ -178,6 +184,7 @@ module.exports = {
         siteUrl: `https://futurismo.biz`,
       },
     },
+    `gatsby-plugin-fastclick`,
 
     /* Netlify */
     `gatsby-plugin-netlify-cache`,
@@ -198,6 +205,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    `gatsby-plugin-nprogress`,
 
     /* Others */
     {
@@ -210,5 +218,6 @@ module.exports = {
         chunkSize: 10000, // default: 1000
       },
     },
+    `gatsby-plugin-twitter`,
   ],
 }
