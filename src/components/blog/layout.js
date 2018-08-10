@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 
 import 'prismjs/themes/prism-okaidia.css'
 import Sidebar from './sidebar'
+import Transition from './transition'
 
 import StyledPoole from './StyledPoole'
 import StyledHyde from './StyledHyde'
@@ -29,7 +30,9 @@ export default ({ children }) => (
           />
           <StyledPoole>
             <StyledBlog>
-              <div className="content container">{children}</div>
+              <Transition>
+                <div className="content container">{children}</div>
+              </Transition>
             </StyledBlog>
           </StyledPoole>
         </StyledHyde>
