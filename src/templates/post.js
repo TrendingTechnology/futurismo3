@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Link from 'gatsby-link'
 import Layout from '../components/blog/layout'
+import DisqusEmbed from '../components/blog/Disqus'
 
 const _ = require('lodash')
 
@@ -52,6 +53,10 @@ export default ({ pageContext }) => {
             dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
           />
           <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
+          <DisqusEmbed
+            identifier={post.node.id}
+            title={post.node.frontmatter.title}
+          />
           <div className="related">
             <ul className="related-posts">
               {prev ? (
