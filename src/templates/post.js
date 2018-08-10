@@ -2,20 +2,9 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Link from 'gatsby-link'
 import Layout from '../components/blog/layout'
-import DisqusEmbed from '../components/blog/Disqus'
+import PostFooter from '../components/blog/PostFooter'
 
 const _ = require('lodash')
-
-const RelatedPost = ({ type, slug, title, date }) => (
-  <li>
-    <h3>
-      {type}:{' '}
-      <Link to={slug}>
-        {title} <small>{date}</small>
-      </Link>
-    </h3>
-  </li>
-)
 
 function Tags(props) {
   if (!props.tags) {
@@ -53,30 +42,7 @@ export default ({ pageContext }) => {
             dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
           />
           <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
-          <DisqusEmbed
-            identifier={post.node.id}
-            title={post.node.frontmatter.title}
-          />
-          <div className="related">
-            <ul className="related-posts">
-              {prev ? (
-                <RelatedPost
-                  type="Previous"
-                  slug={prev.fields.slug}
-                  title={prev.frontmatter.title}
-                  date={prev.frontmatter.date}
-                />
-              ) : null}
-              {next ? (
-                <RelatedPost
-                  type="Next"
-                  slug={next.fields.slug}
-                  title={next.frontmatter.title}
-                  date={next.frontmatter.date}
-                />
-              ) : null}
-            </ul>
-          </div>
+          <PostFooter post={post} prev={prev} next={next} />
         </div>
       </Layout>
     </div>
