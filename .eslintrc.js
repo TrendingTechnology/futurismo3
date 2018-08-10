@@ -8,5 +8,6 @@ module.exports = {
         "react/jsx-one-expression-per-line": 0,
         "react/destructuring-assignment": 0,
         "react/no-danger": 0,
+        "jsx-a11y/anchor-is-valid": 0,
     }   
 };

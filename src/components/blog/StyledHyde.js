@@ -15,6 +15,62 @@ const StyledHyde = styled.div`
     }
   }
 
+  body {
+    color: #515151;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  a {
+    color: #268bd2;
+    text-decoration: none;
+  }
+  a strong {
+    color: inherit;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    color: #717171;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #313131;
+    text-rendering: optimizeLegibility;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  h3 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+  }
+  h4,
+  h5,
+  h6 {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Body text */
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
   .sidebar {
     text-align: center;
     padding: 2rem 1rem;
@@ -88,96 +144,6 @@ const StyledHyde = styled.div`
       margin-left: 22rem;
       margin-right: 4rem;
     }
-  }
-
-  @media (min-width: 48em) {
-    .layout-reverse .sidebar {
-      left: auto;
-      right: 0;
-    }
-    .layout-reverse .content {
-      margin-left: 2rem;
-      margin-right: 20rem;
-    }
-  }
-
-  @media (min-width: 64em) {
-    .layout-reverse .content {
-      margin-left: 4rem;
-      margin-right: 22rem;
-    }
-  }
-
-  /* Red */
-  .theme-base-08 .sidebar {
-    background-color: #ac4142;
-  }
-  .theme-base-08 .content a,
-  .theme-base-08 .related-posts li a:hover {
-    color: #ac4142;
-  }
-
-  /* Orange */
-  .theme-base-09 .sidebar {
-    background-color: #d28445;
-  }
-  .theme-base-09 .content a,
-  .theme-base-09 .related-posts li a:hover {
-    color: #d28445;
-  }
-
-  /* Yellow */
-  .theme-base-0a .sidebar {
-    background-color: #f4bf75;
-  }
-  .theme-base-0a .content a,
-  .theme-base-0a .related-posts li a:hover {
-    color: #f4bf75;
-  }
-
-  /* Green */
-  .theme-base-0b .sidebar {
-    background-color: #90a959;
-  }
-  .theme-base-0b .content a,
-  .theme-base-0b .related-posts li a:hover {
-    color: #90a959;
-  }
-
-  /* Cyan */
-  .theme-base-0c .sidebar {
-    background-color: #75b5aa;
-  }
-  .theme-base-0c .content a,
-  .theme-base-0c .related-posts li a:hover {
-    color: #75b5aa;
-  }
-
-  /* Blue */
-  .theme-base-0d .sidebar {
-    background-color: #6a9fb5;
-  }
-  .theme-base-0d .content a,
-  .theme-base-0d .related-posts li a:hover {
-    color: #6a9fb5;
-  }
-
-  /* Magenta */
-  .theme-base-0e .sidebar {
-    background-color: #aa759f;
-  }
-  .theme-base-0e .content a,
-  .theme-base-0e .related-posts li a:hover {
-    color: #aa759f;
-  }
-
-  /* Brown */
-  .theme-base-0f .sidebar {
-    background-color: #8f5536;
-  }
-  .theme-base-0f .content a,
-  .theme-base-0f .related-posts li a:hover {
-    color: #8f5536;
   }
 `
 export default StyledHyde

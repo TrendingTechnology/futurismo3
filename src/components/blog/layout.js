@@ -21,19 +21,19 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <StyledBlog>
-        <StyledPoole>
-          <StyledHyde>
-            <div className="theme-base-01">
-              <Sidebar
-                title={data.site.siteMetadata.title}
-                description={data.site.siteMetadata.description}
-              />
+      <div>
+        <StyledHyde>
+          <Sidebar
+            title={data.site.siteMetadata.title}
+            description={data.site.siteMetadata.description}
+          />
+          <StyledPoole>
+            <StyledBlog>
               <div className="content container">{children}</div>
-            </div>
-          </StyledHyde>
-        </StyledPoole>
-      </StyledBlog>
+            </StyledBlog>
+          </StyledPoole>
+        </StyledHyde>
+      </div>
     )}
   />
 )
