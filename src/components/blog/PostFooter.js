@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import DisqusEmbed from './Disqus'
 import PostShare from './PostShare'
+import PostAuthor from './PostAuthor'
 
 const RelatedPost = ({ type, slug, title, date }) => (
   <li>
@@ -17,6 +18,7 @@ const RelatedPost = ({ type, slug, title, date }) => (
 const PostFooter = ({ post, prev, next }) => (
   <div className="post-footer">
     <PostShare post={post} />
+    <PostAuthor />
     <DisqusEmbed
       identifier={post.node.id}
       title={post.node.frontmatter.title}
