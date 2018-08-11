@@ -1,9 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Link from 'gatsby-link'
+import Slider from 'react-slide-out'
+import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 import Layout from '../components/blog/layout'
 import PostFooter from '../components/blog/PostFooter'
+import StyledSlider from '../components/blog/StyledSlider'
 
 const _ = require('lodash')
 
@@ -25,11 +28,22 @@ function Thumbnail(props) {
 }
 
 const StyledTOC = styled.div`
-  ul {
-    background: #dadada;
-    border-radius: 8px;
-    box-shadow: 0px 0px 0px silver;
-    padding: 0.5em 0.5em 0.5em 2em;
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #aaa;
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 20px;
+  width: auto;
+  .toc-title {
+    font-weight: 700;
+    text-align: center;
+  }
+  li,
+  ul,
+  ul li {
+    list-style: outside none none;
+    padding: 0;
   }
 `
 
@@ -38,18 +52,29 @@ export default ({ pageContext }) => {
   return (
     <div>
       <Helmet title={`${post.node.frontmatter.title}`} />
+      <MediaQuery query="(min-width: 1400px)">
+        <StyledSlider>
+          <Slider foldMode isFolded foldWidth="300px" title="Table of Contents">
+            <div
+              dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
+            />
+          </Slider>
+        </StyledSlider>
+      </MediaQuery>
       <Layout>
         <div>
           <h1 className="post-title">{post.node.frontmatter.title}</h1>
           <span className="post-date">{post.node.frontmatter.date}</span>
           <Tags tags={post.node.frontmatter.tags} />
           <Thumbnail src={post.node.frontmatter.image} />
-          <p>
-            <strong>Table of Contents</strong>
-          </p>
-          <StyledTOC
-            dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
-          />
+          <MediaQuery query="(max-width: 1400px)">
+            <StyledTOC>
+              <p className="toc-title">Table of Contents</p>
+              <div
+                dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
+              />
+            </StyledTOC>
+          </MediaQuery>
           <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
           <PostFooter post={post} prev={prev} next={next} />
         </div>
