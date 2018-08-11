@@ -28,6 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
                   frontmatter {
                     title
                     date(formatString: "DD MMMM, YYYY")
+                    description
                     draft
                     image
                     tags

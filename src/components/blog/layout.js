@@ -7,7 +7,6 @@ import Transition from './transition'
 
 import StyledPoole from './StyledPoole'
 import StyledHyde from './StyledHyde'
-import StyledBlog from './StyledBlog'
 
 export default ({ children }) => (
   <StaticQuery
@@ -29,11 +28,9 @@ export default ({ children }) => (
             description={data.site.siteMetadata.description}
           />
           <StyledPoole>
-            <StyledBlog>
-              <Transition>
-                <div className="content container">{children}</div>
-              </Transition>
-            </StyledBlog>
+            <Transition>
+              <div className="content container">{children}</div>
+            </Transition>
           </StyledPoole>
         </StyledHyde>
       </div>

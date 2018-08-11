@@ -31,7 +31,8 @@ export default ({ pageContext }) => {
                 <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
               </h1>
               <span className="post-date">{node.frontmatter.date}</span>
-              <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+              <p>{node.frontmatter.description}</p>
             </div>
           ))}
           <div className="pagination">

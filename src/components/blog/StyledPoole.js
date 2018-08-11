@@ -210,7 +210,7 @@ const StyledPoole = styled.div`
   */
 
   .container {
-    max-width: 38rem;
+    max-width: 45rem;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;

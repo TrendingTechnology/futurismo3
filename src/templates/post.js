@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
 import Layout from '../components/blog/layout'
 import PostFooter from '../components/blog/PostFooter'
 
@@ -23,6 +24,15 @@ function Thumbnail(props) {
   return <img src={props.src} alt="thumbnail" />
 }
 
+const StyledTOC = styled.div`
+  ul {
+    background: #dadada;
+    border-radius: 8px;
+    box-shadow: 0px 0px 0px silver;
+    padding: 0.5em 0.5em 0.5em 2em;
+  }
+`
+
 export default ({ pageContext }) => {
   const { post, prev, next } = pageContext
   return (
@@ -37,8 +47,7 @@ export default ({ pageContext }) => {
           <p>
             <strong>Table of Contents</strong>
           </p>
-          <div
-            className="table-of-contents"
+          <StyledTOC
             dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
           />
           <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
