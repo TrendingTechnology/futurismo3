@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Link from 'gatsby-link'
 import Slider from 'react-slide-out'
 import MediaQuery from 'react-responsive'
@@ -7,6 +6,7 @@ import styled from 'styled-components'
 import Layout from '../components/blog/layout'
 import PostFooter from '../components/blog/PostFooter'
 import StyledSlider from '../components/blog/StyledSlider'
+import SEO from '../components/blog/SEO'
 
 const _ = require('lodash')
 
@@ -51,7 +51,7 @@ export default ({ pageContext }) => {
   const { post, prev, next } = pageContext
   return (
     <div>
-      <Helmet title={`${post.node.frontmatter.title}`} />
+      <SEO data={post.node} />
       <MediaQuery query="(min-width: 1400px)">
         <StyledSlider>
           <Slider foldMode isFolded foldWidth="300px" title="Table of Contents">

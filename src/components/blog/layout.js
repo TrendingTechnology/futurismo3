@@ -6,6 +6,7 @@ import Sidebar from './sidebar'
 
 import StyledPoole from './StyledPoole'
 import StyledHyde from './StyledHyde'
+import Transition from './transition'
 
 export default ({ children }) => (
   <StaticQuery
@@ -27,7 +28,9 @@ export default ({ children }) => (
             description={data.site.siteMetadata.description}
           />
           <StyledPoole>
-            <div className="content container">{children}</div>
+            <Transition>
+              <div className="content container">{children}</div>
+            </Transition>
           </StyledPoole>
         </StyledHyde>
       </div>

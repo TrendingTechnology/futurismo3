@@ -1,6 +1,7 @@
 import React from 'react'
 import Disqus from 'disqus-react'
 import styled from 'styled-components'
+import config from '../../../config/BlogConfig'
 
 const SytledDisqus = styled.div`
   margin: 3em 0 0;
@@ -9,7 +10,7 @@ const SytledDisqus = styled.div`
 `
 
 const DisqusComment = ({ identifier, title }) => {
-  const disqusShortname = 'futurismo'
+  const disqusShortname = config.disqusShortname
   const disqusConfig = {
     identifier,
     title,

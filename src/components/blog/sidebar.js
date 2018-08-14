@@ -3,8 +3,11 @@ import Link from 'gatsby-link'
 import moment from 'moment'
 import Slider from 'react-sliding-pane'
 import Modal from 'react-modal'
-import Search from './Search'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
+import { FaTwitter, FaGithub, FaRss } from 'react-icons/fa'
+import styled from 'styled-components'
+import Search from './Search'
+import config from '../../../config/BlogConfig'
 
 const ListLink = props => {
   const { to, children } = props
@@ -15,19 +18,15 @@ const ListLink = props => {
   )
 }
 
-const ListLinkNoOpener = props => {
-  const { to, children } = props
-  return (
-    <a
-      href={to}
-      className="sidebar-nav-item"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {children}
-    </a>
-  )
-}
+const StyledIcons = styled.nav`
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 1em;
+`
+
+const StyledIcon = styled.a`
+  margin-right: 10px;
+`
 
 class SideBar extends React.Component {
   constructor() {
@@ -82,13 +81,32 @@ class SideBar extends React.Component {
                 Search
               </a>
               <ListLink to="/tags">Tags</ListLink>
-              <ListLinkNoOpener to="https://twitter.com/tsu_nera">
-                Twitter
-              </ListLinkNoOpener>
-              <ListLinkNoOpener to="https://github.com/tsu-nera">
-                GitHub
-              </ListLinkNoOpener>
             </nav>
+
+            <StyledIcons>
+              <StyledIcon
+                target="_blank"
+                rel="noopener noreferrer"
+                href={config.userTwitterLink}
+              >
+                <FaTwitter />
+              </StyledIcon>
+              <StyledIcon
+                target="_blank"
+                rel="noopener noreferrer"
+                href={config.userGitHubLink}
+              >
+                <FaGithub />
+              </StyledIcon>
+              <StyledIcon
+                href="/rss.xml"
+                target="_blank"
+                rel="noopener noreferrer alternate"
+                type="application/rss+xml"
+              >
+                <FaRss />
+              </StyledIcon>
+            </StyledIcons>
 
             <p>&copy; {moment().format('YYYY')}. All rights reserved.</p>
           </div>

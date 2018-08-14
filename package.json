@@ -24,6 +24,7 @@
     "gatsby-plugin-netlify-cache": "^0.1.0",
     "gatsby-plugin-nprogress": "^2.0.0-beta.4",
     "gatsby-plugin-offline": "^2.0.0-beta.5",
+    "gatsby-plugin-purgecss": "^2.0.2",
     "gatsby-plugin-purify-css": "^2.2.1",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-robots-txt": "^1.2.0",
@@ -55,9 +56,10 @@
     "react-burger-menu": "^2.5.2",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-icons": "^3.0.0-beta.5",
+    "react-icons": "^3.0.5",
     "react-instantsearch": "^5.2.2",
     "react-instantsearch-dom": "^5.2.2",
+    "react-meta-tags": "^0.4.1",
     "react-modal": "^3.5.1",
     "react-responsive": "^5.0.0",
     "react-share": "^2.2.0",
@@ -73,7 +75,8 @@
     "textlint-rule-preset-ja-technical-writing": "^3.0.1",
     "textlint-rule-preset-japanese": "^4.0.0",
     "textlint-rule-preset-jtf-style": "^2.3.1",
-    "textlint-rule-prh": "^5.2.0"
+    "textlint-rule-prh": "^5.2.0",
+    "url-join": "^4.0.0"
   },
   "keywords": [
     "gatsby"

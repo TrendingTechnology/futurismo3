@@ -9,6 +9,7 @@ import {
 import Link from 'gatsby-link'
 import moment from 'moment'
 import styled from 'styled-components'
+import config from '../../../config/BlogConfig'
 
 const StyledHit = styled.div`
     padding: .5em 0 0 0;
@@ -123,9 +124,9 @@ const SearchPage = () => (
       <br />
       <br />
       <InstantSearch
-        appId="1XCOHKDD5L"
-        apiKey="431167421af36a57af839c2196b1ff78"
-        indexName="futurismo"
+        appId={config.algoliaAppId}
+        apiKey={config.algoliaApiKey}
+        indexName={config.algoliaIndexname}
       >
         <SearchBox />
         <Stats />

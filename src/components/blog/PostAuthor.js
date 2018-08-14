@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import config from '../../../config/BlogConfig'
 
 const StyledPostAuthor = styled.div`
   margin: 3em 0 0;
@@ -35,18 +36,16 @@ const StyledPostAuthorAvator = styled.img`
 
 const PostAuthor = () => (
   <StyledPostAuthor>
-    <StyledPostAuthorAvator
-      src="https://res.cloudinary.com/tsu-nera/image/upload/ar_1:1,b_rgb:ffffff,bo_0px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_100/v1533897547/futurismo/logo.jpg"
-      alt="avator"
-    />
+    <StyledPostAuthorAvator src={config.userAvatar} alt="avator" />
     <StyledPostAuthorBox>
       <p>
-        <strong>tsu-nera</strong>
+        <strong>{config.userName}</strong>
         <a href="/profile" alt="profile">
           (プロフィール詳細)
         </a>
       </p>
-      IT企業の組込みエンジニア→18年6月退職→Web未経験からフリーランスWebエンジニア目指して勉強中の31歳。Rails/React/Java/Python/C言語/Linux。今日も一日、がんばるぞい。<br />
+      {config.userDescription}
+      <br />
     </StyledPostAuthorBox>
   </StyledPostAuthor>
 )

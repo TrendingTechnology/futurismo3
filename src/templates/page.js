@@ -1,13 +1,13 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/blog/layout'
+import SEO from '../components/blog/SEO'
 
 export default ({ data }) => {
   const page = data.markdownRemark
   return (
     <div>
-      <Helmet title={`${page.frontmatter.title}`} />
+      <SEO data={page} />
       <Layout>
         <div>
           <h1 className="page-title">{page.frontmatter.title}</h1>
@@ -23,9 +23,14 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        description
+        image
       }
     }
   }

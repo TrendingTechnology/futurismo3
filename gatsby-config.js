@@ -1,3 +1,5 @@
+const config = require('./config/BlogConfig')
+
 const over10k =
   '(1752|1370|516|1814|1998|1985|1291|1651|1376|1375|1355|1352|1313|1363|1392|1289|1295|1740|1283|1391|1364|1220|1818|2064|1205|1330|1610|1179|6950|2427|2700|2849|2177|2514|2439|2866|2200|2745|2360|2273|2091|2165|2795|2213|2750|2467|2538|2349|2259|2530|2449|2490|2355|2462|2525|2277|2789|2209|2872|2488|2266|2271|2527|2596|2628|2482|2768|2403|2680|2326|2226|2623|2330|2417|2868|2523|2354|2510|2101|2586|2604|2862|2414|2545|2503|2805|2675|2435|2678|2843|2682|2730|5842|5997|6016|5742|5921|5783|6755|6254|6037|6290|6834|6389|6564|6721|6039|6490|6378|6440|6718|6761|6736|6820|6166|6481|6682|6637|6445|6766|6285|6106|6828|2888|2935|5367|5158|5552|4287|3007|5341|3950|3071|5146|4739|5692|2950|2974|2910|5558|2940|452|805|412|392|172|798)'
 
@@ -97,9 +99,9 @@ const queries = [
 
 module.exports = {
   siteMetadata: {
-    title: `Futurismo`,
-    description: 'beating the averages',
-    siteUrl: `https://futurismo.biz`,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     {
@@ -159,6 +161,7 @@ module.exports = {
     // `gatsby-plugin-purify-css`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-purgecss`,
 
     /* image */
     `gatsby-plugin-sharp`,
@@ -168,7 +171,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-16438908-2',
+        trackingId: config.googleAnalyticsID,
         // Puts tracking script in the head instead of the body
         head: true,
       },
@@ -181,7 +184,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://futurismo.biz`,
+        siteUrl: config.siteUrl,
       },
     },
     `gatsby-plugin-fastclick`,
@@ -195,8 +198,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Futurismo',
-        short_name: 'Futurismo',
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
         start_url: '/',
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
@@ -211,9 +214,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
-        appId: '1XCOHKDD5L',
-        apiKey: '431167421af36a57af839c2196b1ff78',
-        indexName: 'futurismo', // for all queries
+        appId: config.algoliaAppId,
+        apiKey: config.algoliaApiKey,
+        indexName: config.algoliaIndexname,
         queries,
         chunkSize: 10000, // default: 1000
       },

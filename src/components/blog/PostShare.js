@@ -7,8 +7,8 @@ import {
   TwitterIcon,
 } from 'react-share'
 import { HatenabookmarkButton } from 'react-social-sharebuttons'
-
 import styled from 'styled-components'
+import config from '../../../config/BlogConfig'
 
 const StyledPostShare = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ const StyledPostShareLink = styled.div`
 const PostShare = ({ post }) => {
   const { title } = post.node.frontmatter
   const { slug } = post.node.fields
-  const url = `https://futurismo.biz${slug}`
+  const url = `${config.siteUrl}${slug}`
   const iconSize = 36
   const filter = count => (count > 0 ? count : '')
 

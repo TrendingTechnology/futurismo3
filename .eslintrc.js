@@ -9,5 +9,6 @@ module.exports = {
         "react/destructuring-assignment": 0,
         "react/no-danger": 0,
         "jsx-a11y/anchor-is-valid": 0,
+        'prefer-destructuring': 0,
     }   
 };

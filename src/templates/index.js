@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Helmet } from 'react-helmet'
 import Layout from '../components/blog/layout'
+import SEO from '../components/blog/SEO'
 
 const NavLink = props => {
   const { test, url, text } = props
@@ -22,7 +22,7 @@ export default ({ pageContext }) => {
 
   return (
     <div>
-      <Helmet title="Futurismo | 未来派ハッカー tsu-neraの技術ブログ" />
+      <SEO />
       <Layout>
         <div className="posts">
           {group.map(({ node }) => (
