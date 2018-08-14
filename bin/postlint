@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 = "" ]; then
+if [ $1="" ]; then
     exit 0
 else
     ./node_modules/.bin/textlint -c .textlintrc.json $1

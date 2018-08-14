@@ -34,7 +34,7 @@ jobs:
       - run: yarn install
       - run: git diff --name-only origin/master | grep .md | xargs ./bin/postlint
       - run: git diff --name-only origin/master | grep .md | xargs ./bin/codecovcheck
-      - run: ./node_moudles/.bin/lighthouse https://futurismo.biz --save-assets
+      - run: ./node_moudles/.bin/lighthouse https://futurismo.biz --save-assets --disable-device-emulation --throttling-method=provided 
       - store_artifacts:
           path: '.'
 
