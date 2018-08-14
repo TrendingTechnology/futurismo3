@@ -2,10 +2,12 @@
 title: "Sample"
 description: "This is sample"
 date: 2018-07-01T15:41:57+09:00
-draft: true
+author: tsu-nera
 type: post
 tags:
 - sample
 size: false
+image: 
+draft: true
 ---
-This is sample post.
+This is template post.
