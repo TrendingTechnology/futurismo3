@@ -161,7 +161,7 @@ module.exports = {
     // `gatsby-plugin-purify-css`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-purgecss`,
+    // `gatsby-plugin-purgecss`,  algoliaが動かなくなった
 
     /* image */
     `gatsby-plugin-sharp`,

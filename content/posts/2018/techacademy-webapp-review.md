@@ -1,5 +1,5 @@
 ---
-title: TechAcademyの最終課題でWebサービスをつくった
+title: TechAcademyのWebアプリケーションコースの最終課題でWebサービスをつくった
 description: TechAcademyのWebアプリケーションコースを受講しました。最終課題でRailsを使ったWebサービスを作成しました。
 date: 2018-08-14 15:12:00
 author: tsu-nera
@@ -8,14 +8,16 @@ tags:
 - Rails
 - Mastodon
 - TechAcademy
+- Ruby
 size: true
 image: https://res.cloudinary.com/tsu-nera/image/upload/v1534228933/futurismo/posts/2018-08-14-154128_716x375_scrot.png
 ---
 
-TechAcademyの[Webアプリケーションコース](https://techacademy.jp/rails-bootcamp)を修了し、Webサービスをはじめてつくりました
+TechAcademyの<a href="https://techacademy.jp/rails-bootcamp">Webアプリケーションコース</a>を修了し、Webサービスをはじめてつくりました。
 
-**WeightoDon - スマートな体重記録Webサイト**
-https://weightodon.herokuapp.com
+WeightoDon - スマートな体重記録Webサイト
+
+- https://weightodon.herokuapp.com
 
 ## TL;DR
 
