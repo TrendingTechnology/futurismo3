@@ -162,6 +162,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     // `gatsby-plugin-purgecss`,  algoliaが動かなくなった
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Kosugi`, `Sawarabi Gothic`],
+      },
+    },
 
     /* image */
     `gatsby-plugin-sharp`,

@@ -5,6 +5,7 @@ const StyledPoole = styled.div`
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Sawarabi Gothic';
   }
 
   html,
@@ -58,10 +59,12 @@ const StyledPoole = styled.div`
   }
   h1 {
     font-size: 2rem;
+    border-bottom: 1px solid #eaecef;
   }
   h2 {
     margin-top: 1rem;
     font-size: 1.5rem;
+    border-bottom: 1px solid #eaecef;
   }
   h3 {
     margin-top: 1.5rem;
@@ -90,6 +93,11 @@ const StyledPoole = styled.div`
   dl {
     margin-top: 0;
     margin-bottom: 1rem;
+  }
+
+  ul li,
+  ol li {
+    line-height: 1.5; /*文の行高*/
   }
 
   dt {

@@ -10,13 +10,45 @@ import SEO from '../components/blog/SEO'
 
 const _ = require('lodash')
 
+const StyledTags = styled.div`
+  .tags {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .tag {
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    color: #999;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+`
+
 function Tags(props) {
   if (!props.tags) {
     return null
   }
 
   return props.tags.map(tag => (
-    <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>
+    <li className="tag">
+      <Link
+        to={`/tags/${_.kebabCase(tag)}`}
+        style={{
+          color: 'black',
+        }}
+      >
+        {tag}
+      </Link>
+    </li>
   ))
 }
 
@@ -65,7 +97,11 @@ export default ({ pageContext }) => {
         <div>
           <h1 className="post-title">{post.node.frontmatter.title}</h1>
           <span className="post-date">{post.node.frontmatter.date}</span>
-          <Tags tags={post.node.frontmatter.tags} />
+          <StyledTags>
+            <ul className="tags">
+              <Tags tags={post.node.frontmatter.tags} />
+            </ul>
+          </StyledTags>
           <Thumbnail src={post.node.frontmatter.image} />
           <MediaQuery query="(max-width: 1400px)">
             <StyledTOC>

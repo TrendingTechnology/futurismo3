@@ -68,7 +68,8 @@ const StyledHyde = styled.div`
   /* Body text */
   p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
   }
 
   .sidebar {
