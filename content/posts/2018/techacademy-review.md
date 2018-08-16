@@ -14,7 +14,7 @@ image: https://res.cloudinary.com/tsu-nera/image/upload/v1534409586/futurismo/po
 
 TechAcademyのWebアプリケーションコースとフロントエンドコースの2コースセットを受講した体験談です。
 
-- [TechAcademy \[テックアカデミー\] \| オンラインのプログラミングスクール](https://techacademy.jp/)
+<a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3412289&pid=885331128" target="_blank" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3412289&pid=885331128" height="1" width="1" border="0">TechAcademy [テックアカデミー]</a>
 
 私の記事は、20万円の実費で受講した生の声です!!
 こんなことまで書いちゃっていいのかなというところまで書きました。
@@ -358,4 +358,4 @@ Cloud9やGitHubをつかって、コードを共有しているので、コー�
 
 以上、がんばってください。
 
-- [TechAcademy \[テックアカデミー\] \| オンラインのプログラミングスクール](https://techacademy.jp/)
+<a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3412289&pid=885331128" target="_blank" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3412289&pid=885331128" height="1" width="1" border="0">TechAcademy [テックアカデミー]</a>
