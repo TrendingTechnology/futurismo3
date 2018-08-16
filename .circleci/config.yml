@@ -8,6 +8,7 @@ general:
     only:
       - /posts.*/
       - /dev.*/
+      - /hotfix.*/
 jobs:
   build:
     docker:

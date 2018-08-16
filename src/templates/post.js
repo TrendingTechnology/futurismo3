@@ -5,8 +5,10 @@ import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 import Layout from '../components/blog/layout'
 import PostFooter from '../components/blog/PostFooter'
-import StyledSlider from '../components/blog/StyledSlider'
+// import StyledSlider from '../components/blog/StyledSlider'
 import SEO from '../components/blog/SEO'
+
+import 'react-slide-out/lib/index.css'
 
 const _ = require('lodash')
 
@@ -85,13 +87,24 @@ export default ({ pageContext }) => {
     <div>
       <SEO data={post.node} />
       <MediaQuery query="(min-width: 1400px)">
-        <StyledSlider>
-          <Slider foldMode isFolded foldWidth="300px" title="Table of Contents">
-            <div
-              dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
-            />
-          </Slider>
-        </StyledSlider>
+        {matches =>
+          matches ? (
+            <Slider
+              foldMode
+              isFolded
+              foldWidth="300px"
+              title="Table of Contents"
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: post.node.tableOfContents,
+                }}
+              />
+            </Slider>
+          ) : (
+            <div />
+          )
+        }
       </MediaQuery>
       <Layout>
         <div>
@@ -104,12 +117,20 @@ export default ({ pageContext }) => {
           </StyledTags>
           <Thumbnail src={post.node.frontmatter.image} />
           <MediaQuery query="(max-width: 1400px)">
-            <StyledTOC>
-              <p className="toc-title">Table of Contents</p>
-              <div
-                dangerouslySetInnerHTML={{ __html: post.node.tableOfContents }}
-              />
-            </StyledTOC>
+            {matches =>
+              matches ? (
+                <StyledTOC>
+                  <p className="toc-title">Table of Contents</p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: post.node.tableOfContents,
+                    }}
+                  />
+                </StyledTOC>
+              ) : (
+                <div />
+              )
+            }
           </MediaQuery>
           <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
           <PostFooter post={post} prev={prev} next={next} />
