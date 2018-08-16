@@ -1,6 +1,6 @@
 ---
-title: ボートフォリオサイトの企画、設計方法についてのガイドライン
-description: ボートフォリオサイトを制作する際、どんな点に注意して企画と設計をすればよいのかを解説しました。
+title: ポートフォリオサイトの企画、設計方法についてのガイドライン
+description: ポートフォリオサイトを制作する際、どんな点に注意して企画と設計をすればよいのかを解説しました。
 date: 2018-08-17 02:50:13
 author: tsu-nera
 type: post
@@ -14,7 +14,7 @@ image: https://res.cloudinary.com/tsu-nera/image/upload/v1534356933/futurismo/po
 自分のポートフォリオサイトをReactを使って作成しました。
 
 - [TechAcademyのフロントエンドコースの最終課題でボートフォリオサイトをつくった \| Futurismo](https://futurismo.biz/techacademy-frontend-review/)
-，
+
 ポートフォリオの内容は上記記事に譲るとしてこの記事では、どうやってボートフォリオを作成したか
 、またはポートフォリオの企画と設計について述べます。
 
