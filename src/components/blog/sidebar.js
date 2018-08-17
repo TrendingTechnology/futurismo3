@@ -87,6 +87,7 @@ class SideBar extends React.Component {
               <StyledIcon
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="twitter"
                 href={config.userTwitterLink}
               >
                 <FaTwitter />
@@ -94,6 +95,7 @@ class SideBar extends React.Component {
               <StyledIcon
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="github"
                 href={config.userGitHubLink}
               >
                 <FaGithub />
@@ -103,6 +105,7 @@ class SideBar extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer alternate"
                 type="application/rss+xml"
+                alt="rss"
               >
                 <FaRss />
               </StyledIcon>
