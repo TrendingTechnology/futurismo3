@@ -199,7 +199,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
-        mergeCachingHeaders: true,
+        headers: {
+          '/*': [`Cache-Control: no-cache`],
+        },
       },
     },
     `gatsby-plugin-netlify-cache`,
