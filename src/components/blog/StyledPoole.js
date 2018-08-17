@@ -272,7 +272,7 @@ const StyledPoole = styled.div`
     display: block;
     margin-top: -0.5rem;
     margin-bottom: 1rem;
-    color: #9a9a9a;
+    color: #303030;
   }
 
   /* Related posts */
@@ -305,7 +305,7 @@ const StyledPoole = styled.div`
     margin-left: -1rem;
     margin-right: -1rem;
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-    color: #ccc;
+    color: #303030;
     text-align: center;
   }
 
