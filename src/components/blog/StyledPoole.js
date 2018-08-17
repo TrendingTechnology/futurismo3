@@ -320,7 +320,7 @@ const StyledPoole = styled.div`
 
   /* Only provide a hover state for linked pagination items */
   a.pagination-item:hover {
-    background-color: #f5f5f5;
+    background-color: #303030;
   }
 
   @media (min-width: 30em) {
