@@ -200,8 +200,9 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
-          '/*': [`cache-control: public, max-age=0, must-revalidate`],
-        }, // option to add more headers. `Link` headers are transformed by the below criteria
+          '/*': [`Cache-Control: max-age=31536000`],
+          '/*.html': [`Cache-Control: max-age=0, must-revalidate, public`],
+        },
       },
     },
     `gatsby-plugin-netlify-cache`,
