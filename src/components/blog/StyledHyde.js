@@ -23,7 +23,7 @@ const StyledHyde = styled.div`
   }
 
   a {
-    color: #268bd2;
+    color: #1a6091;
     text-decoration: none;
   }
   a strong {
@@ -32,7 +32,7 @@ const StyledHyde = styled.div`
   a:hover,
   a:focus {
     text-decoration: underline;
-    color: #717171;
+    color: #4b4b4b;
   }
 
   h1,
