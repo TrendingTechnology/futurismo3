@@ -1,10 +1,10 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../components/blog/layout'
 import SEO from '../components/blog/SEO'
 
-export default ({ data }) => {
-  const page = data.markdownRemark
+export default ({ pageContext }) => {
+  const { page } = pageContext.edges.node
+
   return (
     <div>
       <SEO data={page} />
@@ -17,21 +17,3 @@ export default ({ data }) => {
     </div>
   )
 }
-
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-        image
-      }
-    }
-  }
-`

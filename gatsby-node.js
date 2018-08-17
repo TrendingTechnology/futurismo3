@@ -50,8 +50,12 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
-                    date(formatString: "DD MMMM, YYYY")
+                    date(formatString: "MMMM DD, YYYY")
+                    description
+                    image
                   }
+                  id
+                  html
                   excerpt
                 }
               }
@@ -167,7 +171,7 @@ exports.createPages = ({ graphql, actions }) => {
             edges: allowedPosts,
             createPage,
             pageTemplate: 'src/templates/index.js',
-            pageLength: 15,
+            pageLength: 10,
             pathPrefix: '',
             context: {
               index,
