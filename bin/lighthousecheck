@@ -1,2 +1,2 @@
 #!/bin/bash
-./node_modules/.bin/lighthouse http://localhost:9000 --disable-device-emulation --throttling-method=provided --view
+./node_modules/.bin/lighthouse https://futurismo.biz --disable-device-emulation --throttling-method=provided --chrome-flags="--headless" --view

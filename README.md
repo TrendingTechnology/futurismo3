@@ -1,6 +1,6 @@
 # Futurismo
 
-Tsunemichi Harada（[tsu-nera](https://twitter.com/tsu_nera)のブログです。
+Tsunemichi Harada ([tsu-nera](https://twitter.com/tsu_nera))のブログです。
 
 このサイトは、[GatsbyJS](https://next.gatsbyjs.org/)で作成し、 [Netlify](https://www.netlify.com/)にホスティングしています。
 
@@ -41,8 +41,8 @@ Tsunemichi Harada（[tsu-nera](https://twitter.com/tsu_nera)のブログです�
 - Styled Component対応
 - CircleCIによる静的解析（Textlint）
 
-## Badges
+## Lighthouseの結果
 
-[![CircleCI](https://circleci.com/gh/tsu-nera/futurismo3/tree/master.svg?style=svg)](https://circleci.com/gh/tsu-nera/futurismo3)
+満点です。どや〜〜。
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tsu-nera/futurismo3)
+![lighthouse](https://res.cloudinary.com/tsu-nera/image/upload/v1534554094/futurismo/posts/google-lighthouse-perfect-score.jpg)
