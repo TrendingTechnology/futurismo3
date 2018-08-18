@@ -18,10 +18,8 @@ GatsbyJSを使った当ブログのトップページをGoogle製のWebサイト
 
 ## なぜ目指したか？
 
-GatsbyJSを使って、世界最速の技術ブログを目指そうとしたときに、
+GatsbyJSを使って、最速の技術ブログを目指そうとしたときに、
 評価基準が欲しかったのでLighthouseで計測しました。
-
-これでオール100のスコアをとれば、誰もが認めるすごいブログになるだろうと。
 
 ## すこしズルをした
 
@@ -47,6 +45,3 @@ lighthouse https://futurismo.biz --disable-device-emulation --throttling-method=
 
 - https://github.com/tsu-nera/futurismo3
 
-## まとめ
-
-とはいえ、これで私が世界最速です。どや〜〜。
