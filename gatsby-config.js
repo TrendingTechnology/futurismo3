@@ -176,6 +176,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
 
     /* SEO */
+    /*
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -184,6 +185,7 @@ module.exports = {
         head: true,
       },
     },
+    */
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
