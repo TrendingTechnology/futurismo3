@@ -5,7 +5,6 @@ const StyledPoole = styled.div`
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Sawarabi Gothic';
   }
 
   html,

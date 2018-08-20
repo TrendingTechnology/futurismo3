@@ -4,7 +4,6 @@ import moment from 'moment'
 import Slider from 'react-sliding-pane'
 import Modal from 'react-modal'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
-import { FaTwitter, FaGithub, FaRss } from 'react-icons/fa'
 import styled from 'styled-components'
 import Search from './Search'
 import config from '../../../config/BlogConfig'
@@ -91,7 +90,7 @@ class SideBar extends React.Component {
                 title="twitter"
                 href={config.userTwitterLink}
               >
-                <FaTwitter />
+                <img src="/images/twitter.ico" alt="twitter" width="16" />
               </StyledIcon>
               <StyledIcon
                 target="_blank"
@@ -100,7 +99,7 @@ class SideBar extends React.Component {
                 title="github"
                 href={config.userGitHubLink}
               >
-                <FaGithub />
+                <img src="/images/github.ico" alt="github" width="16" />
               </StyledIcon>
               <StyledIcon
                 href="/rss.xml"
@@ -110,7 +109,7 @@ class SideBar extends React.Component {
                 alt="rss"
                 title="rss"
               >
-                <FaRss />
+                <img src="/images/rss.ico" alt="rss" width="16" />
               </StyledIcon>
             </StyledIcons>
 

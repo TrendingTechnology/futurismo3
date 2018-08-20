@@ -162,18 +162,21 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     // `gatsby-plugin-purgecss`, algoliaが動かなくなった
+    /*
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Kosugi`, `Sawarabi Gothic`],
+        fonts: [`Sawarabi Gothic`],
       },
     },
+    */
 
     /* image */
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
 
     /* SEO */
+    /*
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -182,6 +185,7 @@ module.exports = {
         head: true,
       },
     },
+    */
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
@@ -200,13 +204,13 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
-          '/*.html': [`cache-control: public, max-age=0, must-revalidate`],
-          '/static/*': [`cache-control: public,max-age=31536000,immutable`],
-          '/*.js': [`cache-control: public, max-age=0, must-revalidate`],
+          '/*.html': [`Cache-Control: public, max-age=0, must-revalidate`],
+          '/static/*': [`Cache-Control: public,max-age=31536000,immutable`],
+          '/*.js': [`Cache-Control: public, max-age=0, must-revalidate`],
         },
       },
     },
-    `gatsby-plugin-netlify-cache`,
+    /* `gatsby-plugin-netlify-cache`, */
     /* `gatsby-plugin-netlify-cms`, */
 
     /* PWA */
@@ -226,7 +230,7 @@ module.exports = {
     `gatsby-plugin-nprogress`,
 
     /* Others */
-    /*
+    /* 
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -238,6 +242,6 @@ module.exports = {
       },
     },
     */
-    `gatsby-plugin-twitter`,
+    // `gatsby-plugin-twitter`,
   ],
 }
