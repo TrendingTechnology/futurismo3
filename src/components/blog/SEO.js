@@ -6,8 +6,9 @@ import config from '../../../config/BlogConfig'
 
 class SEO extends React.Component {
   onGALoad() {
+    const windowGlobal = typeof window !== 'undefined' && window
     this.ga('create', config.googleAnalyticsID, 'auto')
-    this.ga('send', 'pageview')
+    this.ga('send', 'pageview', windowGlobal.location.pathname)
   }
 
   render() {
