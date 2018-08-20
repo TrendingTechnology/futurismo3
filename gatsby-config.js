@@ -159,7 +159,7 @@ module.exports = {
 
     /* CSS */
     // `gatsby-plugin-purify-css`,
-    `gatsby-plugin-sass`,
+    // `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     // `gatsby-plugin-purgecss`, algoliaが動かなくなった
     /*
