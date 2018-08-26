@@ -1,18 +1,14 @@
----
-title: 職務経歴
-type: profile
-name: works
-thumbnail: "../../../src/images/works-thumb.jpg"
----
-大学では数学と Computer Science を学びました。
-大学卒業後、2010 年富士通コンピュータテクノロジーズに入社し、
-主にストレージシステムの開発に携ってきました。C、Java でのミドルウェアの開発を経験。
-常に新しい技術に対して興味を持ち、学習が早いと自負しております。
+# 職務経歴書 - 原田経道（はらだつねみち）
+
+大学では数学とComputer Scienceを学びました。
+大学卒業後、2010年富士通コンピュータテクノロジーズに入社し、
+主にストレージシステムの開発に携ってきました。C、Javaでのミドルウェアの開発を経験。
+常に新しい技術に対して興味を持ち、学習が早いと自負しています。
 今後はWeb技術の領域で成長を考え、フリーランスのWebエンジニアとして日々学んでいます。
 
 ## 職務内容
 
-- 2010.04 - 2018.06: (株) 富士通コンピュータテクノロジーズ ソフトウェア開発者
+- 2010.04 - 2018.06:（株）富士通コンピュータテクノロジーズ ソフトウェア開発者
 - 2018.09 - 現在: フリーランス
 
 ```text
@@ -20,8 +16,7 @@ thumbnail: "../../../src/images/works-thumb.jpg"
   [概要] ソフトウェアアップデート、エラーリカバリ機能開発
   [担当] 詳細設計、プログラミング、評価
   [環境] Java8, 社内Webフレームワーク, git, GitLab, CentOS
-  [コメント]
-  ウォータフォール。新規開発。
+  [コメント] ウォータフォール。新規開発。
   12人ほどの大きなチームで、Core機能の設計からテストに携わる。
 ```
 
@@ -29,15 +24,12 @@ thumbnail: "../../../src/images/works-thumb.jpg"
   インフラ管理ソフトウェア開発 (ServerView Infrastructure Manager) 201507-201512
   [概要] インフラ機器を管理するためのソフトウェア開発
   [担当] 要件定義、基本設計
-  [コメント]
-  上流工程の要件定義と、仕様決定に携わる。
+  [コメント] 上流工程の要件定義と、仕様決定に携わる。
 ```
 
 ```text
   Automotive Grade Linux(AGL)プロジェクト 研究開発 201503-201506
-  [担当] リサーチ
-  [コメント]
-  車載システム構築のために必要な様々なオープンソースを調査。
+  [コメント] 車載システム構築のために必要な様々なオープンソースを調査。
 ```
 
 ```text
@@ -45,8 +37,7 @@ thumbnail: "../../../src/images/works-thumb.jpg"
   [概要] Windowsのファイルアップロード、ダウンロードの高速化についての研究開発
   [担当] 詳細設計、プログラミング、評価
   [環境] Java6, Windows, Wireshark, Subversion
-  [コメント]
-  SMBプロトコルのパケットを解析。Javaによるパケットの最適な転送処理を実装。
+  [コメント] SMBプロトコルのパケットを解析。Javaによるパケットの最適な転送処理を実装。
   ネットワーク解析、UML設計、デザインパターン、JUnitによるTDDなどのスキルを取得。
 
   遠隔地からのファイルアクセスを高速化するデータ転送技術を開発 : 富士通
@@ -58,8 +49,7 @@ thumbnail: "../../../src/images/works-thumb.jpg"
   [概要] インフラ機器を管理するためのアプリケーションのプロトタイプの実装
   [担当] プログラミング、評価
   [環境] Ruby, RSpec, Selenium, RubyTk, Excel VBA, Subversion
-  [コメント]
-  RubyTkを利用したUI部分を担当。
+  [コメント] RubyTkを利用したUI部分を担当。
 ```
 
 ```text
@@ -71,16 +61,37 @@ thumbnail: "../../../src/images/works-thumb.jpg"
   ウォータフォール、流用開発。ストレージシステムの機能エンハンスに携わる。
 ```
 
+## 学歴
+
+- 私立巣鴨高校卒業（200104-200503）
+- 東京理科大学数理情報科学科卒業（200604-201003）[専攻: 情報理論]
+
 ## 資格
 
-- TOEIC L&R Score 895 (2017.06)
+- TOEIC L&R Score 895（2017.06）
 - 応用情報技術者試験
 - UMTP L1/L2
 - LPIC L1
-- Java SE8 Silver(2018.09)
-- 日本ディープラーニング協会(JDLA)ジェネラリスト検定(G検定)(2018.12)
+- Java SE 8 Silver（2018.09）
+- 日本ディープラーニング協会（JDLA）ジェネラリスト検定（G検定）（2018.12）
 
-## 学歴
+### 開発言語
 
-- 私立巣鴨高校 卒業(200104-200503)
-- 東京理科大学 数理情報科学科 卒業(200604-201003) [専攻: 情報理論]
+次の３つは通常の業務に必要な読み書きは問題なくできる。
+
+- C言語（4年)
+- Java　(4年）
+- Python（2年)
+  
+プライベートで経験したことがあるものは次のとおり。
+
+Ruby, C++, R, Scala, Haskell, Clojure、JavaScript、HTML, CSS。
+
+## 各種URL
+
+- GitHub: [tsu-nera](https://github.com/tsu-nera)
+- Twitter [tsu_nera](https://twitter.com/tsu_nera)
+- Blog: [Futurismo](http://futurismo.biz)
+- Portfolio: [Portfolio](https://futurismo.biz/portfolio)
+- LinkedIn: [Tsunemichi Harada](https://www.linkedin.com/in/tsunemichi-harada-14a41836/)
+- kaggle: [tsu-nera](https://www.kaggle.com/fox10225fox)

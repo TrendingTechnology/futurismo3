@@ -24,9 +24,9 @@ const WorksPage = ({ fluid }) => (
             </Link>
           </li>
           <li>
-            <Link to="#" className="button">
+            <a href="/resume.pdf" className="button">
               Download Resume
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
