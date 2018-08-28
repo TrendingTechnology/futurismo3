@@ -9,7 +9,7 @@
 ## 職務内容
 
 - 2010.04 - 2018.06:（株）富士通コンピュータテクノロジーズ ソフトウェア開発者
-- 2018.09 - 現在: フリーランス
+- 2018.09 - 現在: フリーランスエンジニア
 
 ```text
   次世代ストレージシステム ミドルウェア開発 201708-201806
@@ -87,11 +87,19 @@
 
 Ruby, C++, R, Scala, Haskell, Clojure、JavaScript、HTML, CSS。
 
+### 作品・ポートフォリオ
+
+- [技術ブログ兼ポートフォリオ(React)](https://github.com/tsu-nera/futurismo3)(2018/08)
+- [体重記録サービス(Ruby on Rails)](https://github.com/tsu-nera/weightodon)(2018/07)
+- [データ解析コンペ(Python)](https://github.com/tsu-nera/JLeague-signate)(2017/12)
+- [FX自動取引プログラム(Python)](https://github.com/tsu-nera/oanda-forex-study)(2015/09)
+- [誤り訂正符号とQRコード(卒業研究)](https://github.com/tsu-nera/my-university-study/tree/master/4)(2010/03)
+
 ## 各種URL
 
 - GitHub: [tsu-nera](https://github.com/tsu-nera)
 - Twitter [tsu_nera](https://twitter.com/tsu_nera)
 - Blog: [Futurismo](http://futurismo.biz)
 - Portfolio: [Portfolio](https://futurismo.biz/portfolio)
-- LinkedIn: [Tsunemichi Harada](https://www.linkedin.com/in/tsunemichi-harada-14a41836/)
+- Wantedly: [Tsunemichi Harada](https://www.wantedly.com/users/19149489)
 - kaggle: [tsu-nera](https://www.kaggle.com/fox10225fox)
