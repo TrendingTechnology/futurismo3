@@ -9,7 +9,9 @@ thumbnail: "../../../src/images/projects-thumb.jpg"
 
 - https://github.com/tsu-nera
 
-## 世界最速ブログ&ボートフォリオサイト(React) Futurismo (2018/08)
+## 爆速ブログ&ボートフォリオサイト(React) Futurismo (2018/08)
+
+![Futurismo](https://res.cloudinary.com/tsu-nera/image/upload/v1534266806/futurismo/posts/13f47511475dd6b8e5a78620bae9b6a3.png)
 
 - https://github.com/tsu-nera/futurismo3
 
@@ -25,6 +27,8 @@ GatsbyJSという世界最速の静的サイト生成フレームワークを利
 
 ## 体重記録サービス(Rails): weightodon (2018/07)
 
+![top image](https://gyazo.com/504f4e2f4cdee1ae4771ce8b7703ba06/thumb/1000)
+
 - https://github.com/tsu-nera/weightodon
 
 TechAcademyのWebアプリケーションコースの最終課題としてRailsのオリジナルサービスを作成しました。
@@ -38,7 +42,9 @@ Google Homeや Amazon Alexaなどのすまーとスピーカー連携を実装�
 
 ## SIGNATE Jリーグの観客動員数予測コンペ 1位(2018現在)(2017/12)
 
-- 公開準備中
+![SIGNATE JLeague 1st solution](https://res.cloudinary.com/tsu-nera/image/upload/v1535432654/futurismo/posts/SIGNATE-JLeague-1st-solution.png)
+
+- https://github.com/tsu-nera/JLeague-signate
 
 データサイエンティスト協会が主催したデータサイエンティスト養成講座（4ヶ月の講座）で、
 SIGNATEのコンペである Jリーグの観客動員数予測 において、
@@ -46,7 +52,6 @@ SIGNATEのコンペである Jリーグの観客動員数予測 において、
 
 この講座では、5人のチームを組んでアイデアを出し合いながらコンペに取り組みました。
 私は、Pythonに慣れていたため、RとPythonの両方の実装を行いました。
-バギング、スタッキングなどの高度なアンサンプル手法も実装しています。
 
 ## FX自動取引Pythonプログラム(2015/09)
 
