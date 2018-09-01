@@ -9,6 +9,17 @@ thumbnail: "../../../src/images/projects-thumb.jpg"
 
 - https://github.com/tsu-nera
 
+## イケメン判定 with TensorFlow.js (2018/09)
+
+![Ikemen](https://res.cloudinary.com/tsu-nera/image/upload/v1535707633/futurismo/posts/2018-08-31-181157_924x518_scrot.png)
+
+- https://github.com/tsu-nera/tfjs-moteone
+
+
+TensorFlow.jsを利用して、イケメン判定サービスをつくりました。
+フロントエンドはReactです。バックエンドはなんとつかっていません。
+Python(Keras)で事前学習したモデルをクライアントのブラウザにダウンロードして、ブラウザ上でディープラーニングができます
+
 ## 爆速ブログ&ボートフォリオサイト(React) Futurismo (2018/08)
 
 ![Futurismo](https://res.cloudinary.com/tsu-nera/image/upload/v1534266806/futurismo/posts/13f47511475dd6b8e5a78620bae9b6a3.png)
