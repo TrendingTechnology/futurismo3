@@ -1,10 +1,25 @@
 # 職務経歴書 - 原田経道（はらだつねみち）
 
-大学では数学とComputer Scienceを学びました。
-大学卒業後、2010年富士通コンピュータテクノロジーズに入社し、
-主にストレージシステムの開発に携ってきました。C、Javaでのミドルウェアの開発を経験。
+大学では数学と Computer Science を学びました。
+大学卒業後、2010 年富士通コンピュータテクノロジーズに入社し、
+主にストレージシステムの開発に携ってきました。C、Java でのミドルウェアの開発を経験。
 常に新しい技術に対して興味を持ち、学習が早いと自負しています。
-今後はWeb技術の領域で成長を考え、フリーランスのWebエンジニアとして日々学んでいます。
+今後は Web 技術の領域で成長を考え、フリーランスの Web エンジニアとして日々学んでいます。
+
+## 基本情報
+
+- 生年月日: 1986/10/25
+- 年齢: 31 歳
+- 性別: 男
+- 住所: 神奈川県川崎市(最寄駅: 武蔵小杉)
+
+## 自己 PR
+
+組込み業界での経験が長いため、Linux に詳しいです。
+ミッションクリティカルな製品開発の経験から、高品質なものづくりが得意です。
+またデータサイエンスへの転職を考え 2 年間学んでいたため、AI 分野への知見があります。
+CS 分野に精通しようと、40 ほどの MOOC の講座を受講しました。
+人一倍の努力と好奇心があります。たとえば、5 年間で 6000 時間の独学をしました。
 
 ## 職務内容
 
@@ -15,9 +30,9 @@
   次世代ストレージシステム ミドルウェア開発 201708-201806
   [概要] ソフトウェアアップデート、エラーリカバリ機能開発
   [担当] 詳細設計、プログラミング、評価
-  [環境] Java8, 社内Webフレームワーク, git, GitLab, CentOS
-  [コメント] ウォータフォール。新規開発。
-  12人ほどの大きなチームで、Core機能の設計からテストに携わる。
+  [環境] Java8, 社内Webフレームワーク, git, GitLab, CentOS, Redmine
+  [コメント] ウォータフォール。新規開発。12人ほどの大きなチームで、
+  Core機能(装置再起動・ソフトウェアアップデート）の設計からテストに携わる。
 ```
 
 ```text
@@ -69,36 +84,38 @@
 ## 資格
 
 - TOEIC L&R Score 895（2017.06）
-- 応用情報技術者試験
+- 基本情報技術者試験(2008.10)
+- 応用情報技術者試験(2010.10)
 - UMTP L1/L2
 - LPIC L1
-- Java SE 8 Silver（2018.09）
-- 日本ディープラーニング協会（JDLA）ジェネラリスト検定（G検定）（2018.12）
+- Java SE 8 Silver（2017.09）
+- 日本ディープラーニング協会（JDLA）ジェネラリスト検定（G 検定）（2017.12）
 
 ### 開発言語
 
-次の３つは通常の業務に必要な読み書きは問題なくできる。
+次は通常の業務に必要な読み書きは問題なくできます。
 
-- C言語（4年)
-- Java　(4年）
-- Python（2年)
-  
-プライベートで経験したことがあるものは次のとおり。
+- C 言語（4 年)
+- Java 　(4 年）
+- Python（2 年)
+- Ruby (6 ヶ月)
 
-Ruby, C++, R, Scala, Haskell, Clojure、JavaScript、HTML, CSS。
+どんな言語でも 2 ヶ月で身につけられます。以下は実際に MOOC で携わった言語。
+
+C++, R, Scala, Haskell, Clojure、JavaScript、HTML, CSS。
 
 ### 作品・ポートフォリオ
 
+- [イケメン判定サービス(React/Python)](https://github.com/tsu-nera/tfjs-moteone)(2018/08)
 - [技術ブログ兼ポートフォリオ(React)](https://github.com/tsu-nera/futurismo3)(2018/08)
 - [体重記録サービス(Ruby on Rails)](https://github.com/tsu-nera/weightodon)(2018/07)
-- [データ解析コンペ(Python)](https://github.com/tsu-nera/JLeague-signate)(2017/12)
-- [FX自動取引プログラム(Python)](https://github.com/tsu-nera/oanda-forex-study)(2015/09)
-- [誤り訂正符号とQRコード(卒業研究)](https://github.com/tsu-nera/my-university-study/tree/master/4)(2010/03)
+- [SIGNATE データ解析コンペ(Python)](https://github.com/tsu-nera/JLeague-signate)(2017/12)
+- [FX 自動取引プログラム(Python)](https://github.com/tsu-nera/oanda-forex-study)(2015/09)
+- [誤り訂正符号と QR コード(卒業研究)](https://github.com/tsu-nera/my-university-study/tree/master/4)(2010/03)
 
-## 各種URL
+## 各種 URL
 
 - GitHub: [tsu-nera](https://github.com/tsu-nera)
-- Twitter [tsu_nera](https://twitter.com/tsu_nera)
 - Blog: [Futurismo](http://futurismo.biz)
 - Portfolio: [Portfolio](https://futurismo.biz/portfolio)
 - Wantedly: [Tsunemichi Harada](https://www.wantedly.com/users/19149489)
