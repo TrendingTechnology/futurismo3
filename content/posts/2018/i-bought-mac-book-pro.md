@@ -11,6 +11,8 @@ size: false
 image: https://res.cloudinary.com/tsu-nera/image/upload/v1537463106/futurismo/posts/mac-book-pro-box.jpg
 ---
 
+どーも、本日よりフリーターエンジニアになった tsu-nera です。
+
 Mac Book Pro を買いました。思うところを書きます。
 
 ## なぜ買ったか
@@ -43,3 +45,7 @@ Windows と Linux は似ているところが多いので差は感じなかっ�
 
 Linux が好きな私としては、自分が Mac Book をつかうなんて、考えてもいなかったのだけれども、
 いざ買ってしまうと、ワクワクしているのだっだ。
+
+これで、windows, mac, Linux の三大 OS 使いになった。もう怖いものなしだ。
+
+がんばって、 Mac Book 代の費用をバイトで稼ぎたい。
