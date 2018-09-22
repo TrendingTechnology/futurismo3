@@ -95,9 +95,9 @@ psコマンドで起動を確認。
 $ docker-compose ps
  Name                       Command               State           Ports
 ----------------------------------------------------------------------------------------
-bk-pos-fetcher_db_1      docker-entrypoint.sh postgres    Up      5432/tcp
-bk-pos-fetcher_redis_1   docker-entrypoint.sh redis ...   Up      0.0.0.0:6379->6379/tcp
-bk-pos-fetcher_web_1     bundle exec rails s -p 300 ...   Up      0.0.0.0:3000->3000/tcp
+myapp_db_1      docker-entrypoint.sh postgres    Up      5432/tcp
+myapp_redis_1   docker-entrypoint.sh redis ...   Up      0.0.0.0:6379->6379/tcp
+myapp_web_1     bundle exec rails s -p 300 ...   Up      0.0.0.0:3000->3000/tcp
 ```
 
 これて起動完了です。Enjoy!!
