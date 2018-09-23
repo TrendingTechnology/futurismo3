@@ -1,6 +1,6 @@
 ---
 title: Docker内で Headless Chrome を起動してRSpecを動作させる方法
-description: Headless Chromeを使った RSpecのUIテストについて紹介します
+description: Headless ChromeをつかったRSpecのUIテストについて紹介します
 date: 2018-09-23 10:48:08
 author: tsu-nera
 type: post
@@ -12,15 +12,15 @@ size: false
 image: https://res.cloudinary.com/tsu-nera/image/upload/v1536239732/futurismo/thumbnails/rails-logo.png
 ---
 
-こんにちは、tsu-neraです。
+こんにちは、tsu-nera です.
 
-今日は、Headless Chromeを使った RSpecのUIテストについて紹介します。
-なぜHeadlessかというと、Docker内でブラウザテストをやりたいから。
-同じ方法は、CircleCIなどの継続的インテグレーションでも使えます。
+Headless Chrome を使った RSpec の UI テストについて紹介します。
+なぜ Headless かというと、Docker 内でブラウザテストをやりたいから。
+同じ方法は、CircleCI などの継続的インテグレーションでも使えます。
 
-## Capybara準備
+## Capybara 準備
 
-UIテストには、capybaraを使います。Gemfileに以下を追記。
+UI テストには、capybara を使います。Gemfile に以下を追記。
 
 ```ruby
 group :test do
@@ -28,15 +28,15 @@ group :test do
 end
 ```
 
-spec/rails_helper.rbに、以下を追記。
+spec/rails_helper.rb に、以下を追記。
 
 ```ruby
-require 'capybara/rspec' 
+require 'capybara/rspec'
 ```
 
-## Headless Chromeの準備
+## Headless Chrome の  準備
 
-まずはDockerに、google-chromeと、webdriverを入れる。Dockerfileに以下を書く。
+まずは Docker に、google-chrome と、webdriver を入れる。Dockerfile に以下を書く。
 
 ```Dockerfile
 FROM ruby:2.4.1
@@ -59,12 +59,12 @@ RUN bundle install
 COPY . /app
 ```
 
-以下をGemfileに書く。
+以下を Gemfile に書く。
 
 ```ruby
 group :test do
     gem 'capybara', '~> 2.15.4'
-    gem 'selenium-webdriver' 
+    gem 'selenium-webdriver'
     gem 'chromedriver-helper'
     gem 'launchy', '~> 2.4.3'
 end
@@ -87,4 +87,4 @@ end
 Capybara.javascript_driver = :chrome_headless
 ```
 
-以前は、PhantomJSを使っていた人も、Headless Chromeを試してみよう！
+以前は、PhantomJS を使っていた人も、Headless Chrome を試してみよう！
