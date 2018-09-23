@@ -14,7 +14,9 @@ image: https://res.cloudinary.com/tsu-nera/image/upload/v1536239732/futurismo/th
 
 こんにちは、tsu-neraです。
 
-今日は、Headless Chromeを使った RSpecのUIテストについて紹介します。なぜHeadlessかというと、Docker内でブラウザテストをやりたいから。同じ方法は、CircleCIなどの継続的インテグレーションでも使えます。
+今日は、Headless Chromeを使った RSpecのUIテストについて紹介します。
+なぜHeadlessかというと、Docker内でブラウザテストをやりたいから。
+同じ方法は、CircleCIなどの継続的インテグレーションでも使えます。
 
 ## Capybara準備
 
