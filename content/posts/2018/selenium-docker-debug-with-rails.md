@@ -1,5 +1,5 @@
 ---
-title: Dockerで RailsアプリのRSpec(Capybara)のフィーチャースペックをUI操作を見ながらする
+title: Dockerで RailsアプリのRSpecのフィーチャースペックをUI操作を見ながらする
 description: Docker + Capybara + Headless Chromeでの RSpecのフィーチャースペックでブラウザの動きを見る方法について調べました
 date: 2018-09-25 05:37:17
 author: tsu-nera
