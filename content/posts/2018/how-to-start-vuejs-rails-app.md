@@ -7,6 +7,7 @@ type: post
 tags:
   - Rails
   - Vue.js
+  - Docker
 size: false
 image: https://res.cloudinary.com/tsu-nera/image/upload/v1536239732/futurismo/thumbnails/rails-logo.png
 ---
@@ -96,19 +97,19 @@ Gemfile.lock は空ファイル。
 
 ## Rails プロプロジェクトの作成
 
-`webpack=react`オプションをつけて、rails プロジェクトを作成します。
+`webpack=vue`オプションをつけて、rails プロジェクトを作成します。
 
 ```bash
-$ docker-compose run web rails new . --webpack=react
+$ docker-compose run web rails new . --webpack=vue
 ```
 
-### 既存プロジェクトに React を追加
+### 既存プロジェクトに Vue を追加
 
 この場合は、次のコマンドでいけるらしい。私の場合、ねんのため、叩いておいた。
 
 ```bash
 $ docker-compose run web rails webpacker:install
-$ docker-compose run web rails webpacker:install:react
+$ docker-compose run web rails webpacker:install:vue
 ```
 
 ## 動作確認
@@ -126,7 +127,7 @@ $ docker-compose up -d
 
 - ./app/javascript/packs/application.js
 - ./app/javascript/packs/hello_vue.js
-  ./app/javascript/app.vue
+- ./app/javascript/app.vue
 
 適当にコントローラを作成して、この Js を呼び出してみます。
 
@@ -181,4 +182,3 @@ p {
 }
 </style>
 ```
-
