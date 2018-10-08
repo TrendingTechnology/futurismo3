@@ -137,11 +137,13 @@ $ rails g controller StaticPages home
 
 `javascript_pack_tag`というタグを利用することで、js を呼び出します。
 
-application.html.erb
+home.html.erb
 
 ```ruby
 <%= javascript_pack_tag 'hello_vue', 'data-turbolinks-track': 'reload' %>
 ```
+
+hello_vue.js
 
 ```javascript
 import Vue from 'vue'
@@ -157,6 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(app)
 })
 ```
+
+app.vue
 
 ```javascript
 <template>
