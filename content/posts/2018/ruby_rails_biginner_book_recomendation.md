@@ -9,7 +9,7 @@ tags:
 - Rails
 - Book
 size: false
-image: 
+image: https://res.cloudinary.com/tsu-nera/image/upload/v1536239732/futurismo/thumbnails/rails-logo.png
 ---
 
 Rails エンジニアとして働き始めたのだが、こんなことをリーダーに言われてしまった。
