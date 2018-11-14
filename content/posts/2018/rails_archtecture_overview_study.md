@@ -7,7 +7,7 @@ type: post
 tags:
 - Rails 
 size: false
-image: image: https://res.cloudinary.com/tsu-nera/image/upload/v1536239732/futurismo/thumbnails/rails-logo.png
+ image: https://res.cloudinary.com/tsu-nera/image/upload/v1536239732/futurismo/thumbnails/rails-logo.png
 ---
 
 深夜に寝ぼけてRailsの怪しい情報商材を買ってしまいました。
