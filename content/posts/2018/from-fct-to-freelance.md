@@ -8,7 +8,7 @@ tags:
 - diary
 - フリーランス
 - 仕事
-size: false
+size: true
 image: https://res.cloudinary.com/tsu-nera/image/upload/v1536693729/futurismo/thumbnails/diary.jpg
 draft: false
 ---
