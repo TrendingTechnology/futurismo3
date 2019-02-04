@@ -7,8 +7,9 @@ type: post
 tags:
 - 勉強カフェ
 - イベント
+- Webサービス
 size: false
-image: 
+image: https://res.cloudinary.com/tsu-nera/image/upload/v1549247111/futurismo/thumbnails/entrepreneur.jpg
 ---
 
 勉強カフェ溝の口スタジオのイベント、３ヶ月プログラムに参加します。
@@ -51,7 +52,10 @@ image:
 現在、２つのWebサービスを個人で開発していますが、それのマネタイズを目指します。
 
 まず、はじめの月で、マネタイズとなる母体となるWebサービスを仕上げます。
-もともと仕事獲得のためのポートフォリオとしてWebサービスを作成していたので、
-webサービスを元に仕事を獲得します。そして、最後にWebサービスをユーザに売って、お金を稼ぎます。
+もともと仕事獲得のためのポートフォリオとしてWebサービスを作成していたので、webサービスを元に仕事を獲得します。
+そして、最後にWebサービスをユーザに売って、お金を稼ぎます。
+
+Webサービスの立ち上げにあたって、BILL Auletさんの書いたMITの起業の教科書を参考にします。
+- http://disciplinedentrepreneurship.com/
 
 よろしくおねがいします。
